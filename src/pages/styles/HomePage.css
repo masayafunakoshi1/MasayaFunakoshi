@@ -1,0 +1,24 @@
+.Homepage-container {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-auto-rows: 200px;
+  grid-template-rows: 300px 400px 100px;
+}
+.grid-item-2 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  justify-self: center;
+}
+
+.Homepage-Text {
+  text-align: justify;
+  color: rgb(248, 248, 248);
+}
+.Homepage-Text-Norm {
+  font-size: 35px;
+}
+.Homepage-Text-Highlight {
+  display: inline;
+  font-size: 50px;
+  color: #ffe600;
+}
