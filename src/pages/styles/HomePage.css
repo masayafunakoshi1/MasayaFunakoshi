@@ -1,18 +1,29 @@
-.Homepage-container {
+.Homepage-Container {
   display: grid;
-  grid-template-columns: 4fr 2fr;
-  grid-auto-rows: 200px;
-  grid-template-rows: 300px 400px 100px;
+  grid-template-rows: 150px 600px 100px;
 }
-.grid-item-2 {
+
+.Homepage-Container-Subgrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 100px 300px;
+}
+
+.Grid-Item-1 {
   grid-column-start: 1;
+  grid-row-start: 2;
+  justify-self: end;
+}
+
+.Grid-Item-2 {
+  grid-column-start: 2;
   grid-row-start: 2;
   justify-self: center;
 }
 
 .Homepage-Text {
   text-align: justify;
-  color: rgb(248, 248, 248);
+  margin-top: 40px;
 }
 .Homepage-Text-Norm {
   font-size: 35px;
@@ -21,4 +32,14 @@
   display: inline;
   font-size: 50px;
   color: #ffe600;
+}
+
+.Homepage-Img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.Front-End-Dev-Text {
+  margin-top: 30px;
 }

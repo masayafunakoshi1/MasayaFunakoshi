@@ -1,0 +1,33 @@
+.NavBar-Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.NavBar-Items {
+  margin: 0 45px 0 40px;
+}
+
+/* NavBar Items */
+
+.Title {
+}
+
+.Title-Code {
+  display: none;
+}
+
+.NavBar-Items-All {
+  margin-left: 220px;
+}
+
+.Grid-Item-NavBar-1 {
+  grid-column-start: 1;
+  justify-self: center;
+  align-content: center;
+}
+
+.Grid-Item-NavBar-3 {
+  grid-column-start: 3;
+  justify-self: start;
+  align-content: center;
+}
