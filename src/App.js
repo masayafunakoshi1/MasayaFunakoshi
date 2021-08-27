@@ -1,6 +1,6 @@
 import "./App.css";
 import HomePage from "./pages/HomePage";
-import Projects from "./sections/Projects";
+import Projects from "./sections/projects-section/Projects";
 
 //Navbar, footer, homepage
 

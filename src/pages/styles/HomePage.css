@@ -1,6 +1,6 @@
 .Homepage-Container {
   display: grid;
-  grid-template-rows: 100px 700px 100px;
+  grid-template-rows: 100px 700px 200px;
 }
 
 .Homepage-Container-Subgrid {
