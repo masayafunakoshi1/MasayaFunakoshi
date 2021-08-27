@@ -1,0 +1,36 @@
+.Projects-Page-Container {
+  display: grid;
+  grid-template-rows: 100px 700px;
+  grid-template-columns: 150px auto 150px;
+}
+.Projects-Page-Container-Subgrid {
+  display: grid;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.Projects-Page-Container-SubSubgrid {
+  display: grid;
+  grid-template-rows: 20px 4fr 20px;
+  grid-template-columns: 10px 4fr 10px;
+}
+.Projects-Page-Container-SubSubSubgrid {
+  display: grid;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-template-rows: 200px 1fr;
+  /* grid-template-columns: 319px; */
+}
+
+.Projects-Page-Container-Subx4grid {
+  display: grid;
+  grid-row-start: 2;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.Projects-Header {
+  grid-column-start: 2;
+  margin-top: 20px;
+}

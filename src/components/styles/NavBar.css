@@ -1,15 +1,17 @@
 .NavBar-Container {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 150px 1fr 2fr 150px;
 }
 
 .NavBar-Items {
+  font-size: 20px;
   margin: 0 45px 0 40px;
 }
 
 /* NavBar Items */
 
 .Title {
+  font-size: 28px;
 }
 
 .Title-Code {
@@ -21,13 +23,13 @@
 }
 
 .Grid-Item-NavBar-1 {
-  grid-column-start: 1;
-  justify-self: center;
+  grid-column-start: 2;
+  justify-self: start;
   align-content: center;
 }
 
 .Grid-Item-NavBar-3 {
   grid-column-start: 3;
-  justify-self: start;
+  justify-self: end;
   align-content: center;
 }
