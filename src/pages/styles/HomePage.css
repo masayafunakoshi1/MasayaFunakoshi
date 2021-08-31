@@ -1,0 +1,45 @@
+.Homepage-Container {
+  display: grid;
+  grid-template-rows: 100px 700px 200px;
+}
+
+.Homepage-Container-Subgrid {
+  display: grid;
+  grid-template-columns: 150px 3fr 2fr 150px;
+  grid-template-rows: 100px 600px;
+}
+
+.Grid-Item-1 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: start;
+}
+
+.Grid-Item-2 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  justify-self: center;
+}
+
+.Homepage-Text {
+  text-align: left;
+  margin-top: 40px;
+}
+.Homepage-Text-Norm {
+  font-size: 30px;
+}
+.Homepage-Text-Highlight {
+  display: inline;
+  font-size: 45px;
+  color: #ffe600;
+}
+
+.Homepage-Img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.Front-End-Dev-Text {
+  margin-top: 30px;
+}

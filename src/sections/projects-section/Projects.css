@@ -1,0 +1,142 @@
+.Projects-Page-Container {
+  display: grid;
+  grid-template-rows: 100px 1000px;
+  grid-template-columns: minmax(150px, auto) auto minmax(150px, auto);
+}
+.Projects-Page-Container-Subgrid {
+  display: grid;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-template-rows: 1fr 1fr minmax(auto, 400px);
+  grid-template-columns: minmax(370px, auto) minmax(370px, auto) minmax(
+      370px,
+      auto
+    );
+}
+.Projects-Page-Container-SubSubgrid {
+  display: grid;
+  grid-template-rows: 20px minmax(200px, auto) 40px;
+  grid-template-columns: 10px minmax(370px, auto) 10px;
+}
+.Projects-Page-Container-SubSubSubgrid {
+  display: grid;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-template-rows: minmax(200px, auto) minmax(80px, auto);
+  grid-template-columns: minmax(370px, auto);
+
+  background-color: rgb(22, 22, 22);
+}
+
+.Projects-Page-Container-Subx4grid {
+  display: grid;
+  grid-row-start: 2;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.Projects-Header {
+  grid-column-start: 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Projects-Gifs {
+  /* max-height: 230px; */
+  height: 200px;
+  min-height: 150px;
+  /* max-width: 430px; */
+  width: 370px;
+  min-width: 350px;
+}
+
+/*///////////////// Device-width responsive size --Still need fixing-- ////////////*/
+
+@media screen and (min-width: 1441px) {
+  .Projects-Gifs {
+    max-height: 350px;
+    height: 280px;
+    min-height: 150px;
+    max-width: 560px;
+    width: 460px;
+    min-width: 350px;
+  }
+}
+
+.Tech-Stack-Container {
+  display: flex;
+  max-height: 23px;
+  max-width: 70px;
+  border-radius: 13px;
+
+  margin: 10px 0px 0px 2px;
+  background: rgb(65, 64, 64);
+
+  font-size: 14px;
+
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* bubble text under gifs, make sure there's no decoration */
+
+.Tech-Stack-Text {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* Location of bubbles in grid, extensions added for bigger text bubbles */
+
+.Grid-Location-1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.Grid-Location-2 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.Grid-Location-3 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.Grid-Location-4 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.Grid-Location-4-ext {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+}
+.Grid-Location-5 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+.Grid-Location-5-ext {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+}
+.Grid-Location-6 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+.Grid-Location-6-ext {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+}
+
+.extension {
+  max-width: 95px;
+}

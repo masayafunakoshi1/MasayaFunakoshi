@@ -1,0 +1,93 @@
+.AboutMe-Container {
+  display: grid;
+  grid-template-rows: 150px 950px;
+  grid-template-columns: 150px auto 150px;
+}
+.AboutMe-Header {
+  grid-column-start: 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.AboutMe-Subgrid {
+  display: grid;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-template-rows: repeat(2, 1fr);
+}
+.AboutMe-SubSubgrid {
+  display: grid;
+  grid-row-start: 1;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* .AboutMe-SubSubSubgrid {
+} */
+.AboutMe-PictureSubgrid {
+  display: grid;
+  grid-column-start: 1;
+  grid-template-columns: 20px auto 20px;
+  grid-template-rows: 10px auto 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.PicOfMe {
+  grid-column-start: 2;
+  grid-row-start: 2;
+
+  max-width: 530px;
+  max-height: 383px;
+}
+
+.AboutMe-TechStackSubgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.AboutMe-TextSubgrid {
+  display: grid;
+  grid-row-start: 2;
+}
+
+.TechStack {
+  max-height: auto;
+  max-width: 180px;
+}
+
+.HTML {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.CSS {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.JS {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.Firebase {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.React {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.MUI {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  max-height: auto;
+  max-width: 160px;
+  margin-left: 15px;
+}
+
+.AboutMe-Text {
+  text-align: left;
+  font-size: 22px;
+  line-height: 4.5ch;
+}
