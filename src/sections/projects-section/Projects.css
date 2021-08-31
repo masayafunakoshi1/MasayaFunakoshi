@@ -1,6 +1,6 @@
 .Projects-Page-Container {
   display: grid;
-  grid-template-rows: 100px 800px;
+  grid-template-rows: 100px 1000px;
   grid-template-columns: minmax(150px, auto) auto minmax(150px, auto);
 }
 .Projects-Page-Container-Subgrid {
