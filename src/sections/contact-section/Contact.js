@@ -40,13 +40,18 @@ const Contact = () => {
 
   //Styles
   const useStyles = makeStyles((theme) => ({
-    root: {
-      marginTop: "10%",
+    // root: {
+    //   marginTop: "10%",
+    // },
+    notchedOutline: {
+      borderWidth: "1px",
+      borderColor: "white !important",
     },
     smallTextfield: {
       background: "#FAFAFA",
       width: "35ch",
       marginBottom: "30px",
+      colorSecondary: "white",
     },
     bigTextfield: {
       background: "#FAFAFA",
@@ -65,13 +70,18 @@ const Contact = () => {
 
   return (
     <div className="ContactPage-Container">
+      <div className="ContactPage-Header Section-Header">About Me</div>
       <div className="ContactPage-Subgrid">
         <div className="ContactPage-Form" onChange={validationChecker}>
           <form noValidate autoComplete="off" className={classes.root}>
             <TextField
               className={classes.smallTextfield}
+              InputProps={{
+                classes: {
+                  notchedOutline: classes.notchedOutline,
+                },
+              }}
               type="text"
-              id="filled-basic"
               label="Full-Name"
               variant="outlined"
               value={contactData.fullName}
@@ -86,7 +96,6 @@ const Contact = () => {
               <TextField
                 className={classes.smallTextfield}
                 type="text"
-                id="filled-basic"
                 label="Email"
                 variant="outlined"
                 value={contactData.email}
@@ -102,7 +111,6 @@ const Contact = () => {
               <TextField
                 className={classes.smallTextfield}
                 type="text"
-                id="filled-basic"
                 label="Subject"
                 variant="outlined"
                 value={contactData.subject}
