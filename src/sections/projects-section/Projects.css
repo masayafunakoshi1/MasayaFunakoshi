@@ -1,6 +1,6 @@
 .Projects-Page-Container {
   display: grid;
-  grid-template-rows: 100px 1000px;
+  grid-template-rows: 100px 900px;
   grid-template-columns: minmax(150px, auto) auto minmax(150px, auto);
 }
 .Projects-Page-Container-Subgrid {
@@ -52,7 +52,7 @@
 
 /*///////////////// Device-width responsive size --Still need fixing-- ////////////*/
 
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1600px) {
   .Projects-Gifs {
     max-height: 350px;
     height: 280px;
