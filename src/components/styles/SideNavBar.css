@@ -1,0 +1,16 @@
+.SideNavBar-Container {
+  display: grid;
+  max-width: 100px;
+  max-height: 800px;
+  background-color: gray;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.SideNavBar-Home {
+}
+.SideNavBar-Projects {
+}
+.SideNavBar-About {
+}
+.SideNavBar-Contact {
+}

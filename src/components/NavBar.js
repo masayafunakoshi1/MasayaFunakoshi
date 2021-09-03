@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./styles/NavBar.css";
 
 const NavBar = () => {
+  const [showCodeTitle, setShowCodeTitle] = useState(false);
+
   return (
     <nav className="NavBar-Container">
       <div className="Grid-Item-NavBar-1">
         <span>
-          <Link className="Title">masaya funakoshi</Link>
-          <Link className="Title-Code">
-            <span>&#60;</span>
-            mf <span>&#47;</span>
-            <span>&#62;</span>
+          <Link
+            className="Title"
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            onMouseEnter={() => setShowCodeTitle(true)}
+            onMouseLeave={() => setShowCodeTitle(false)}
+          >
+            {!showCodeTitle ? (
+              <span>masaya funakoshi</span>
+            ) : (
+              <span className="Title-Code">
+                <>&#60;</>
+                mf <>&#47;</>
+                <>&#62;</>
+              </span>
+            )}
           </Link>
         </span>
       </div>
@@ -41,7 +57,7 @@ const NavBar = () => {
         <span className="NavBar-Items">
           <Link
             activeClass="active"
-            to="content"
+            to="contact"
             spy={true}
             smooth={true}
             duration={1000}

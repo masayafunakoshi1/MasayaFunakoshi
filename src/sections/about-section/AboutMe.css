@@ -1,6 +1,6 @@
 .AboutMe-Container {
   display: grid;
-  grid-template-rows: 100px 950px;
+  grid-template-rows: 100px 1170px;
   grid-template-columns: 150px auto 150px;
 }
 .AboutMe-Header {
@@ -11,7 +11,7 @@
   display: grid;
   grid-row-start: 2;
   grid-column-start: 2;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 470px);
 }
 .AboutMe-SubSubgrid {
   display: grid;
@@ -24,7 +24,7 @@
   display: grid;
   grid-column-start: 1;
   grid-template-columns: 20px auto 20px;
-  grid-template-rows: 0px auto 20px;
+  grid-template-rows: 0px minmax(auto, 446px) 0px;
   align-items: center;
   justify-content: center;
 }
@@ -40,11 +40,12 @@
 .AboutMe-TechStackSubgrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 223px) minmax(auto, 0px);
 }
 .AboutMe-TextSubgrid {
   display: grid;
   grid-template-columns: 1fr 900px 1fr;
+  grid-template-rows: minmax(auto, 500px);
 }
 
 .TechStack {

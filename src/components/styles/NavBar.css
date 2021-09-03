@@ -4,22 +4,32 @@
 }
 
 .NavBar-Items {
-  font-size: 20px;
+  font-size: 22px;
   margin: 0 45px 0 40px;
+}
+
+.NavBar-Items:hover {
+  cursor: pointer;
+  color: #ffe600;
 }
 
 /* NavBar Items */
 
 .Title {
-  font-size: 28px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.Title:hover {
+  cursor: pointer;
 }
 
 .Title-Code {
-  display: none;
+  margin-left: 50px;
 }
 
 .NavBar-Items-All {
-  margin-left: 220px;
+  margin-left: 250px;
 }
 
 .Grid-Item-NavBar-1 {

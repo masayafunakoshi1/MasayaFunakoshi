@@ -1,38 +1,54 @@
 .Homepage-Container {
   display: grid;
-  grid-template-rows: 100px 700px 200px;
+  grid-template-rows: 100px 700px 100px;
 }
 
 .Homepage-Container-Subgrid {
   display: grid;
-  grid-template-columns: 150px 3fr 2fr 150px;
+  grid-template-columns: 150px 2.9fr 2fr 150px;
   grid-template-rows: 100px 600px;
 }
 
 .Grid-Item-1 {
   grid-column-start: 2;
   grid-row-start: 2;
-  justify-self: start;
+  justify-self: center;
 }
 
 .Grid-Item-2 {
   grid-column-start: 3;
   grid-row-start: 2;
   justify-self: center;
+  align-self: center;
 }
 
 .Homepage-Text {
   text-align: left;
-  margin-top: 40px;
+  margin-top: 80px;
 }
+
 .Homepage-Text-Norm {
+  min-width: 612px;
+  min-height: 80px;
   font-size: 30px;
 }
+
 .Homepage-Text-Highlight {
   display: inline;
   font-size: 45px;
   color: #ffe600;
+  cursor: pointer;
 }
+.Name-Pronounce {
+  display: inline-block;
+  min-width: 478px;
+  min-height: 61px;
+  font-size: 39.7px;
+}
+
+/* .Homepage-Text-Name {
+  margin-left: 143px;
+} */
 
 .Homepage-Img {
   width: 350px;
@@ -43,3 +59,7 @@
 .Front-End-Dev-Text {
   margin-top: 30px;
 }
+
+/* .Homepage-Text-nextToName {
+  position: sticky;
+} */
