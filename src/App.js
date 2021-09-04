@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import Projects from "./sections/projects-section/Projects";
 import AboutMe from "./sections/about-section/AboutMe";
 import Contact from "./sections/contact-section/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 //Navbar, footer, homepage
 
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <NavBar />
       <HomePage />
+      <ScrollToTop />
       <Projects />
       <AboutMe />
       <Contact />

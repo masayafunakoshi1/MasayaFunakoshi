@@ -79,6 +79,10 @@
   text-decoration: none;
 }
 
+.Tech-Stack-Container:hover {
+  background: rgb(97, 96, 96);
+}
+
 /* bubble text under gifs, make sure there's no decoration */
 
 .Tech-Stack-Text {

@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Projects.css";
 
 const ProjectsPreview = () => {
+  const [showGif, setShowGif] = useState(0);
+
+  const gifSrc = [
+    "project-gifs/Tired-Nomads-App.gif",
+    "project-gifs/Photography-Wesbite-Gif.gif",
+    "project-gifs/MasaFuna-Photo-Gallery.gif",
+    "project-gifs/Recipe-App.gif",
+  ];
+
+  const imgSrc = [
+    "project-gifs/Tired-Nomads-App.png",
+    "project-gifs/Photography-Website.png",
+    "project-gifs/MasaFuna-Photo-Gallery.png",
+    "project-gifs/Recipe-App.png",
+  ];
+
   return (
     <div className="Projects-Page-Container-Subgrid">
       {/* 2 rows 2 columns (one column is for side nav bar) */}
@@ -9,10 +25,14 @@ const ProjectsPreview = () => {
         {/* 2 rows */}
         <div className="Projects-Page-Container-SubSubSubgrid">
           <img
+            onMouseEnter={() => setShowGif(1)}
+            onMouseLeave={() => setShowGif(0)}
             className="Projects-Gifs"
-            src="project-gifs/Tired-Nomads-App.gif"
+            src={showGif === 1 ? gifSrc[0] : imgSrc[0]}
+            // src={gifSrc[0]}
             alt="TiredNomadsAppGif"
           />
+
           <div className="Projects-Page-Container-Subx4grid">
             <div className="Tech-Stack-Container Grid-Location-1">
               <a
@@ -67,8 +87,11 @@ const ProjectsPreview = () => {
       <div className="Projects-Page-Container-SubSubgrid">
         <div className="Projects-Page-Container-SubSubSubgrid">
           <img
+            onMouseEnter={() => setShowGif(2)}
+            onMouseLeave={() => setShowGif(0)}
             className="Projects-Gifs"
-            src="project-gifs/Photography-Wesbite-Gif.gif"
+            src={showGif === 2 ? gifSrc[1] : imgSrc[1]}
+            // src={gifSrc[1]}
             alt="PhotographyWebsiteGif"
           />
           <div className="Projects-Page-Container-Subx4grid">
@@ -123,8 +146,11 @@ const ProjectsPreview = () => {
       <div className="Projects-Page-Container-SubSubgrid">
         <div className="Projects-Page-Container-SubSubSubgrid">
           <img
+            onMouseEnter={() => setShowGif(3)}
+            onMouseLeave={() => setShowGif(0)}
             className="Projects-Gifs"
-            src="project-gifs/MasaFuna-Photo-Gallery.gif"
+            src={showGif === 3 ? gifSrc[2] : imgSrc[2]}
+            // src={gifSrc[2]}
             alt="MasaFunaPhotoGalleryGif"
           />
           <div className="Projects-Page-Container-Subx4grid">
@@ -188,8 +214,11 @@ const ProjectsPreview = () => {
       <div className="Projects-Page-Container-SubSubgrid">
         <div className="Projects-Page-Container-SubSubSubgrid">
           <img
+            onMouseEnter={() => setShowGif(4)}
+            onMouseLeave={() => setShowGif(0)}
             className="Projects-Gifs"
-            src="project-gifs/Recipe-App.gif"
+            src={showGif === 4 ? gifSrc[3] : imgSrc[3]}
+            // src={gifSrc[3]}
             alt="RecipeAppGif"
           />
           <div className="Projects-Page-Container-Subx4grid">
