@@ -1,0 +1,118 @@
+.Backdrop-Container {
+  background-color: black;
+  opacity: 80%;
+
+  height: 200px;
+  min-height: 150px;
+
+  width: 370px;
+  min-width: 350px;
+
+  position: absolute;
+  cursor: pointer;
+}
+
+.Backdrop-SubSubgrid {
+  display: grid;
+  grid-row-start: 2;
+  grid-template-columns: repeat(4, 92.5px);
+  grid-template-rows: 75px 75px;
+}
+
+.Backdrop-Subgrid {
+  display: grid;
+  grid-template-rows: 50px 2fr;
+}
+
+.AppTitle {
+  grid-row-start: 1;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  font-size: 23pt;
+  color: #ffe600;
+}
+
+.Project-Description {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  text-align: left;
+  font-size: 1.1vw;
+  line-height: 3.5ch;
+  margin-left: 20px;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.Src-Code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 4;
+}
+
+#Github:hover {
+  transition: 0.01s ease;
+  max-width: 60px;
+  filter: invert(90%) sepia(9%) saturate(7024%) hue-rotate(359deg)
+    brightness(105%) contrast(105%);
+}
+
+#Github {
+  max-width: 45px;
+  max-height: auto;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(41deg)
+    brightness(106%) contrast(104%);
+}
+
+.Demo {
+  grid-column-start: 4;
+}
+
+#Live-Demo {
+  font-family: Garamond, Arial;
+  font-size: 11pt;
+  font-weight: bold;
+
+  opacity: 100%;
+  border: 0px;
+
+  width: 60px;
+  height: 40px;
+  border-radius: 20%;
+
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+
+#Live-Demo:hover {
+  background-color: #ffe600;
+  font-size: 14pt;
+  width: 75px;
+  height: 55px;
+  transition: 0.2s ease;
+}
+
+@media screen and (min-width: 1600px) {
+  .Backdrop-Container {
+    max-height: auto;
+    min-height: 310px;
+    max-width: auto;
+    min-width: 510px;
+  }
+
+  .Backdrop-Subgrid {
+    display: grid;
+    grid-template-rows: 75px 2fr;
+  }
+
+  .Backdrop-SubSubgrid {
+    display: grid;
+    grid-row-start: 2;
+    grid-template-columns: repeat(4, 127.5px);
+    grid-template-rows: repeat(2, 117.5px);
+  }
+}

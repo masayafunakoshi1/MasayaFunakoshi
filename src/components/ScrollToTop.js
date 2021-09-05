@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { makeStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
 
 const ScrollToTop = () => {
+  const [scrollPos, setScrollPos] = useState(0);
+
+  const scrollFunc = () => {
+    if (scrollPos <= 500) {
+      setScrollPos(window.scrollY);
+    } else {
+      setScrollPos(500);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollFunc);
+  }, []);
+
   const useStyles = makeStyles((theme) => ({
     ScrollToTopBtn: {
       backgroundColor: "#ffe600",
@@ -13,6 +27,9 @@ const ScrollToTop = () => {
       zIndex: 20,
       width: "65px",
       height: "65px",
+      transition: "ease-in",
+      transitionDuration: "0.2s",
+      opacity: "100%",
     },
     KeyUpIcon: {
       display: "flex",
@@ -23,6 +40,9 @@ const ScrollToTop = () => {
       marginTop: "20px",
       maxHeight: "40px",
     },
+    hidden: {
+      opacity: "0%",
+    },
   }));
 
   const classes = useStyles();
@@ -30,7 +50,7 @@ const ScrollToTop = () => {
     <Fab
       aria-label="ScrollToTop"
       onClick={() => scroll.scrollToTop()}
-      className={classes.ScrollToTopBtn}
+      className={scrollPos >= 500 ? classes.ScrollToTopBtn : classes.hidden}
     >
       <span className={classes.KeyUpIcon}>^</span>
     </Fab>

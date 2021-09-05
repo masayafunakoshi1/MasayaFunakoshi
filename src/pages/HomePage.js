@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ScrollToTop from "../components/ScrollToTop";
 import "./styles/HomePage.css";
 
 let audio = new Audio("/NamePronounciation.mp3");
@@ -51,7 +50,8 @@ const HomePage = () => {
             A <h2 className="Homepage-Text-Highlight"> Front-End Developer</h2>
             <br />A Photographer
             <br />A Adventurer
-            <br />A Artist
+            <br />
+            An Artist
           </div>
         </div>
         <div className="Grid-Item-2">

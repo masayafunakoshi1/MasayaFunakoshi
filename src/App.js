@@ -1,5 +1,5 @@
+import React from "react";
 import "./App.css";
-import { Link } from "react-scroll";
 import NavBar from "./components/NavBar";
 import SideNavBar from "./components/SideNavBar";
 import HomePage from "./pages/HomePage";

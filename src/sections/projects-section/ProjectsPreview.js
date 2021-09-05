@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./Projects.css";
+import BackdropGif from "../../components/BackdropGif";
 
 const ProjectsPreview = () => {
   const [showGif, setShowGif] = useState(0);
+  const [backdropShow, setBackdropShow] = useState(null);
+  const [backdropNum, setBackdropNum] = useState(null);
 
   const gifSrc = [
     "project-gifs/Tired-Nomads-App.gif",
@@ -18,6 +21,16 @@ const ProjectsPreview = () => {
     "project-gifs/Recipe-App.png",
   ];
 
+  const backdropCondHandler = async (num) => {
+    setBackdropNum(num);
+    if (backdropShow === num) {
+      setBackdropShow(null);
+    } else {
+      console.log("showing");
+      setBackdropShow(num);
+    }
+  };
+
   return (
     <div className="Projects-Page-Container-Subgrid">
       {/* 2 rows 2 columns (one column is for side nav bar) */}
@@ -31,7 +44,17 @@ const ProjectsPreview = () => {
             src={showGif === 1 ? gifSrc[0] : imgSrc[0]}
             // src={gifSrc[0]}
             alt="TiredNomadsAppGif"
+            onClick={() => backdropCondHandler(0)}
           />
+
+          {backdropShow === 0 ? (
+            <BackdropGif
+              backdropNum={backdropNum}
+              backdropCondHandler={backdropCondHandler}
+            />
+          ) : (
+            ""
+          )}
 
           <div className="Projects-Page-Container-Subx4grid">
             <div className="Tech-Stack-Container Grid-Location-1">
@@ -93,7 +116,18 @@ const ProjectsPreview = () => {
             src={showGif === 2 ? gifSrc[1] : imgSrc[1]}
             // src={gifSrc[1]}
             alt="PhotographyWebsiteGif"
+            onClick={() => backdropCondHandler(1)}
           />
+
+          {backdropShow === 1 ? (
+            <BackdropGif
+              backdropNum={backdropNum}
+              backdropCondHandler={backdropCondHandler}
+            />
+          ) : (
+            ""
+          )}
+
           <div className="Projects-Page-Container-Subx4grid">
             <a
               href="https://reactjs.org/"
@@ -152,7 +186,18 @@ const ProjectsPreview = () => {
             src={showGif === 3 ? gifSrc[2] : imgSrc[2]}
             // src={gifSrc[2]}
             alt="MasaFunaPhotoGalleryGif"
+            onClick={() => backdropCondHandler(2)}
           />
+
+          {backdropShow === 2 ? (
+            <BackdropGif
+              backdropNum={backdropNum}
+              backdropCondHandler={backdropCondHandler}
+            />
+          ) : (
+            ""
+          )}
+
           <div className="Projects-Page-Container-Subx4grid">
             <a
               href="https://reactjs.org/"
@@ -220,7 +265,18 @@ const ProjectsPreview = () => {
             src={showGif === 4 ? gifSrc[3] : imgSrc[3]}
             // src={gifSrc[3]}
             alt="RecipeAppGif"
+            onClick={() => backdropCondHandler(3)}
           />
+
+          {backdropShow === 3 ? (
+            <BackdropGif
+              backdropNum={backdropNum}
+              backdropCondHandler={backdropCondHandler}
+            />
+          ) : (
+            ""
+          )}
+
           <div className="Projects-Page-Container-Subx4grid">
             <a
               href="https://reactjs.org/"

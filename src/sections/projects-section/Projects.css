@@ -48,6 +48,7 @@
   /* max-width: 430px; */
   width: 370px;
   min-width: 350px;
+  cursor: pointer;
 }
 
 /*///////////////// Device-width responsive size --Still need fixing-- ////////////*/
