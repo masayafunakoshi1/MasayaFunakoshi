@@ -23,8 +23,8 @@ const projectDemos = [
 ];
 
 const projectDescriptions = [
-  "Track down where you've slept on a roadtrip, complete with reviews, ratings, and trip markers. Uses React, Firebase, MUI for styling, and Google Maps API.",
-  "Personal photography website showcasing my photos for clients. Uses React, Firebase, and MUI for styling",
+  "Track down where you've slept on a roadtrip, complete with reviews, ratings, and trip markers. Full-Stack application using React, Firebase, MUI for styling, and Google Maps API.",
+  "My personal photography website showcasing my photos for clients. Full-Stack application using React, Firebase, and MUI for styling",
   "Instagram clone photo gallery, with a responsive UI and animations. Uses React, Typescript, Firebase, Semantic UI and framer-motion for styling/animations",
   "Simple Recipe App using Edamam API. React, Edamam, and MUI for styling.",
 ];

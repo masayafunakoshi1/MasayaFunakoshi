@@ -24,7 +24,7 @@
 #Second-Line {
   display: grid;
   grid-row-start: 2;
-  grid-template-columns: minmax(100px, 145px) minmax(490px, 500px);
+  grid-template-columns: minmax(100px, 155px) minmax(490px, 500px);
 }
 
 #Second-Line-Name {
@@ -32,7 +32,12 @@
 }
 
 #Third-Line {
+  display: grid;
   grid-row-start: 3;
+  grid-template-rows: minmax(66px, 70px) minmax(66px, 70px) minmax(66px, 70px) minmax(
+      66px,
+      70px
+    );
 }
 
 .Grid-Item-2 {
@@ -49,7 +54,7 @@
 
 .Homepage-Text-Norm {
   min-width: 612px;
-  min-height: 80px;
+  min-height: 70px;
   font-size: 30px;
 }
 
@@ -61,6 +66,11 @@
   color: #ffe600;
   cursor: pointer;
 }
+
+.Pronounce-Container {
+  max-height: 51px;
+}
+
 .Name-Pronounce {
   display: inline;
   min-width: 478px;
@@ -74,8 +84,37 @@
   border-radius: 50%;
 }
 
-.Front-End-Dev-Text {
-  margin-top: 30px;
+.Homepage-Text-FirstLine {
+  display: grid;
+  grid-template-columns: minmax(30px, 40px) minmax(407px, 420px) 1fr;
+  text-align: left;
+  min-height: 66px;
+  grid-row-start: 1;
+}
+
+.Homepage-Text-FirstLine1 {
+  grid-row-start: 1;
+}
+
+.Homepage-Text-FirstLine2 {
+  grid-column-start: 2;
+  margin-left: 10px;
+}
+
+.Descriptor-Text {
+  margin-left: 50px;
+}
+
+.Photographer {
+  grid-row-start: 2;
+}
+
+.Hiker {
+  grid-row-start: 3;
+}
+
+.Artist {
+  grid-row-start: 4;
 }
 
 .Homepage-Text-NameContainer {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import BackdropGif from "../../components/BackdropGif";
+import PopperComp from "../../components/Popper";
 
 const ProjectsPreview = () => {
   const [showGif, setShowGif] = useState(0);
@@ -37,15 +38,23 @@ const ProjectsPreview = () => {
       <div className="Projects-Page-Container-SubSubgrid">
         {/* 2 rows */}
         <div className="Projects-Page-Container-SubSubSubgrid">
-          <img
-            onMouseEnter={() => setShowGif(1)}
-            onMouseLeave={() => setShowGif(0)}
-            className="Projects-Gifs"
-            src={showGif === 1 ? gifSrc[0] : imgSrc[0]}
-            // src={gifSrc[0]}
-            alt="TiredNomadsAppGif"
-            onClick={() => backdropCondHandler(0)}
-          />
+          <PopperComp>
+            <img
+              onMouseEnter={() => setShowGif(1)}
+              onMouseLeave={() => setShowGif(0)}
+              className="Projects-Gifs"
+              src={showGif === 1 ? gifSrc[0] : imgSrc[0]}
+              // src={gifSrc[0]}
+              alt="TiredNomadsAppGif"
+              onClick={() => backdropCondHandler(0)}
+              id="ProjectGif-Popover"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "images/Construction2.jpg";
+                e.target.id = "ProjectGif-Popover-UnderDevelopment";
+              }}
+            />
+          </PopperComp>
 
           {backdropShow === 0 ? (
             <BackdropGif
@@ -109,15 +118,23 @@ const ProjectsPreview = () => {
       </div>
       <div className="Projects-Page-Container-SubSubgrid">
         <div className="Projects-Page-Container-SubSubSubgrid">
-          <img
-            onMouseEnter={() => setShowGif(2)}
-            onMouseLeave={() => setShowGif(0)}
-            className="Projects-Gifs"
-            src={showGif === 2 ? gifSrc[1] : imgSrc[1]}
-            // src={gifSrc[1]}
-            alt="PhotographyWebsiteGif"
-            onClick={() => backdropCondHandler(1)}
-          />
+          <PopperComp>
+            <img
+              onMouseEnter={() => setShowGif(2)}
+              onMouseLeave={() => setShowGif(0)}
+              className="Projects-Gifs"
+              src={showGif === 2 ? gifSrc[1] : imgSrc[1]}
+              // src={gifSrc[1]}
+              alt="PhotographyWebsiteGif"
+              onClick={() => backdropCondHandler(1)}
+              id="ProjectGif-Popover"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "images/Construction2.jpg";
+                e.target.id = "ProjectGif-Popover-UnderDevelopment";
+              }}
+            />
+          </PopperComp>
 
           {backdropShow === 1 ? (
             <BackdropGif
@@ -179,15 +196,23 @@ const ProjectsPreview = () => {
       </div>
       <div className="Projects-Page-Container-SubSubgrid">
         <div className="Projects-Page-Container-SubSubSubgrid">
-          <img
-            onMouseEnter={() => setShowGif(3)}
-            onMouseLeave={() => setShowGif(0)}
-            className="Projects-Gifs"
-            src={showGif === 3 ? gifSrc[2] : imgSrc[2]}
-            // src={gifSrc[2]}
-            alt="MasaFunaPhotoGalleryGif"
-            onClick={() => backdropCondHandler(2)}
-          />
+          <PopperComp>
+            <img
+              onMouseEnter={() => setShowGif(3)}
+              onMouseLeave={() => setShowGif(0)}
+              className="Projects-Gifs"
+              src={showGif === 3 ? gifSrc[2] : imgSrc[2]}
+              // src={gifSrc[2]}
+              alt="MasaFunaPhotoGalleryGif"
+              onClick={() => backdropCondHandler(2)}
+              id="ProjectGif-Popover"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "images/Construction2.jpg";
+                e.target.id = "ProjectGif-Popover-UnderDevelopment";
+              }}
+            />
+          </PopperComp>
 
           {backdropShow === 2 ? (
             <BackdropGif
@@ -258,15 +283,23 @@ const ProjectsPreview = () => {
       </div>
       <div className="Projects-Page-Container-SubSubgrid">
         <div className="Projects-Page-Container-SubSubSubgrid">
-          <img
-            onMouseEnter={() => setShowGif(4)}
-            onMouseLeave={() => setShowGif(0)}
-            className="Projects-Gifs"
-            src={showGif === 4 ? gifSrc[3] : imgSrc[3]}
-            // src={gifSrc[3]}
-            alt="RecipeAppGif"
-            onClick={() => backdropCondHandler(3)}
-          />
+          <PopperComp>
+            <img
+              onMouseEnter={() => setShowGif(4)}
+              onMouseLeave={() => setShowGif(0)}
+              className="Projects-Gifs"
+              src={showGif === 4 ? gifSrc[3] : imgSrc[3]}
+              // src={gifSrc[3]}
+              alt="RecipeAppGif"
+              onClick={() => backdropCondHandler(3)}
+              id="ProjectGif-Popover"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "images/Construction2.jpg";
+                e.target.id = "ProjectGif-Popover-UnderDevelopment";
+              }}
+            />
+          </PopperComp>
 
           {backdropShow === 3 ? (
             <BackdropGif
@@ -328,13 +361,35 @@ const ProjectsPreview = () => {
       </div>
       <div className="Projects-Page-Container-SubSubgrid">
         <div className="Projects-Page-Container-SubSubSubgrid">
-          <img className="Projects-Gifs" src="" alt="" />
+          <PopperComp>
+            <img
+              className="Projects-Gifs"
+              src=""
+              alt=""
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "images/Construction1.jpg";
+                e.target.id = "ProjectGif-Popover-UnderDevelopment";
+              }}
+            />
+          </PopperComp>
           <div className="Projects-Page-Container-Subx4grid"></div>
         </div>
       </div>
       <div className="Projects-Page-Container-SubSubgrid">
         <div className="Projects-Page-Container-SubSubSubgrid">
-          <img className="Projects-Gifs" src="" alt="" />
+          <PopperComp>
+            <img
+              className="Projects-Gifs"
+              src=""
+              alt=""
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "images/Construction2.jpg";
+                e.target.id = "ProjectGif-Popover-UnderDevelopment";
+              }}
+            />
+          </PopperComp>
           <div className="Projects-Page-Container-Subx4grid"></div>
         </div>
       </div>

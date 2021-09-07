@@ -39,6 +39,7 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={1000}
+            offset={-50}
           >
             Projects
           </Link>
@@ -50,6 +51,7 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={1000}
+            offset={-50}
           >
             About
           </Link>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutMe.css";
+import AboutMeTechStack from "./AboutMeTechStack";
 
 const AboutMe = () => {
   return (
@@ -15,106 +16,51 @@ const AboutMe = () => {
               className="PicOfMe"
             />
           </div>
-          <div className="AboutMe-TechStackSubgrid">
-            <div className="HTML">
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="tech-stack/icons8-html-5.svg"
-                  alt="HTML5_Logo"
-                  className="TechStack"
-                />
-              </a>
-            </div>
-            <div className="CSS">
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="tech-stack/icons8-css3.svg"
-                  alt="CSS3_Logo"
-                  className="TechStack"
-                />
-              </a>
-            </div>
-            <div className="JS">
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="tech-stack/icons8-javascript.svg"
-                  alt="JS_Logo"
-                  className="TechStack"
-                />
-              </a>
-            </div>
-            <div className="Firebase">
-              <a
-                href="https://firebase.google.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="tech-stack/icons8-firebase.svg"
-                  alt="Firebase_Logo"
-                  className="TechStack"
-                />
-              </a>
-            </div>
-            <div className="React">
-              <a
-                href="https://reactjs.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="tech-stack/logo192.png"
-                  alt="React_Logo"
-                  className="TechStack"
-                />
-              </a>
-            </div>
-            <div className="MUI">
-              <a
-                href="https://material-ui.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="tech-stack/icons8-material-ui.svg"
-                  alt="MUI_Logo"
-                  className="TechStack MUI"
-                />
-              </a>
-            </div>
-          </div>
+          <AboutMeTechStack />
 
           {/* </div> */}
         </div>
         <div className="AboutMe-TextSubgrid">
           <span className="AboutMe-Text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Hey there! My name's Masaya Funakoshi, 22-years-old, born and raised
+            in Tarrytown, NY. Currently specializing in Front-End Web
+            Development, primarily focusing on HTML, CSS, JS and React.
+            Completely self-taught for the past 9-months and going strong till I
+            find my first dev role!
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              I graduated in the Spring of 2020 with a BA in Arts Management...
+              right at the peak of the pandemic 😅. The Arts took quite a hit
+              from the quarantine, so with my lack of jobs/internships and newly
+              found time, I actually decided to do something productive and
+              learned how to code! And of course, you know how the story goes...
+              I fell in love with it 😍
+            </p>
+            <p>
+              I always thought I was too dumb to learn how to code, and saying I
+              wasn't good at Math or Science is putting it lightly. BUT despite
+              all that, a friend inspired me try a website called{" "}
+              <a
+                className="AboutMe-Link-Text"
+                href="https://www.internetingishard.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Interneting Is Hard{" "}
+              </a>
+              , teaching me the basics of HTML and CSS. It wasn't a "Hello
+              World!" for me, no, it was when I was able to change the size and
+              color of a blue &#60;div&#62; to red with CSS. It blew my mind. I
+              was hooked. I had to know more.
+            </p>
+            <p>
+              Throughout this journey, it's been a series of ups and downs. The
+              euphoria you feel when you solve an issue that's been bugging you
+              for days, as well as the frustration of a small problem leading
+              you down a rabbit hole, eventually creating even more problems
+              than you thought possible. At the end of the day, it's taught me a
+              mindset, any problem can be solved with enough perserverance,
+              logical thinking, and Google. I appreciate the experiences I've
+              had so far, and am looking forward to adventures that await!
             </p>
           </span>
         </div>

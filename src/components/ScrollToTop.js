@@ -51,6 +51,7 @@ const ScrollToTop = () => {
       aria-label="ScrollToTop"
       onClick={() => scroll.scrollToTop()}
       className={scrollPos >= 500 ? classes.ScrollToTopBtn : classes.hidden}
+      id="BackToTop-Popover"
     >
       <span className={classes.KeyUpIcon}>^</span>
     </Fab>
