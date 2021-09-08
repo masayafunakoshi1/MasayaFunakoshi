@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Typing from "react-typing-animation";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion"
 import "./styles/HomePage.css";
 import PopperComp from "../components/PopperComp";
 

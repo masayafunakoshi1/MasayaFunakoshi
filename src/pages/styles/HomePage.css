@@ -1,12 +1,12 @@
 .Homepage-Container {
   display: grid;
-  grid-template-rows: 100px 700px 100px;
+  grid-template-rows: 50px 700px 100px;
 }
 
 .Homepage-Container-Subgrid {
   display: grid;
   grid-template-columns: 150px 2.9fr 2fr 150px;
-  grid-template-rows: 100px 600px;
+  grid-template-rows: 20px 600px;
 }
 
 .Grid-Item-1 {

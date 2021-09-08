@@ -1,12 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./styles/NavBar.css";
 
 const NavBar = () => {
   const [showCodeTitle, setShowCodeTitle] = useState(false);
+  const [navbarActive, setNavbarActive] = useState(false)
+
+  const scrollFunc = () => {
+    if (window.scrollY > 0) {
+      setNavbarActive(true)
+    } else {
+      setNavbarActive(false)
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollFunc);
+  }, []);
 
   return (
-    <nav className="NavBar-Container">
+    <nav className={`NavBar-Container ${navbarActive ? "active" : ""}`}>
       <div className="Grid-Item-NavBar-1">
         <span>
           <Link
