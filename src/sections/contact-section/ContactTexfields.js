@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FadeInSections from "../../components/FadeInSections";
 import "./Contact.css";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -71,71 +72,78 @@ const ContactTexfields = () => {
   return (
     <div className="ContactPage-Form" onChange={validationChecker}>
       <form noValidate autoComplete="off" className={classes.root}>
-        <TextField
-          className={classes.smallTextfield}
-          InputProps={{
-            classes: {
-              notchedOutline: classes.notchedOutline,
-            },
-          }}
-          type="text"
-          label="Full-Name"
-          variant="filled"
-          value={contactData.fullName}
-          onChange={(e) => {
-            const val = e.target.value;
-            setContactData((prevState) => {
-              return { ...prevState, fullName: val };
-            });
-          }}
-        />
-        <div>
+        <FadeInSections>
           <TextField
             className={classes.smallTextfield}
+            InputProps={{
+              classes: {
+                notchedOutline: classes.notchedOutline,
+              },
+            }}
             type="text"
-            label="Email"
+            label="Full-Name"
             variant="filled"
-            value={contactData.email}
+            value={contactData.fullName}
             onChange={(e) => {
               const val = e.target.value;
               setContactData((prevState) => {
-                return { ...prevState, email: val };
+                return { ...prevState, fullName: val };
               });
             }}
           />
+        </FadeInSections>
+        <div>
+          <FadeInSections>
+            <TextField
+              className={classes.smallTextfield}
+              type="text"
+              label="Email"
+              variant="filled"
+              value={contactData.email}
+              onChange={(e) => {
+                const val = e.target.value;
+                setContactData((prevState) => {
+                  return { ...prevState, email: val };
+                });
+              }}
+            />
+          </FadeInSections>
         </div>
         <div>
+          <FadeInSections>
+            <TextField
+              className={classes.smallTextfield}
+              type="text"
+              label="Subject"
+              variant="filled"
+              value={contactData.subject}
+              onChange={(e) => {
+                const val = e.target.value;
+                setContactData((prevState) => {
+                  return { ...prevState, subject: val };
+                });
+              }}
+            />
+          </FadeInSections>
+        </div>
+        <FadeInSections>
           <TextField
-            className={classes.smallTextfield}
+            className={classes.bigTextfield}
             type="text"
-            label="Subject"
-            variant="filled"
-            value={contactData.subject}
+            value={contactData.message}
             onChange={(e) => {
               const val = e.target.value;
               setContactData((prevState) => {
-                return { ...prevState, subject: val };
+                return { ...prevState, message: val };
               });
             }}
+            id="outlined-multiline-static"
+            label="Message"
+            multiline
+            rows={10}
+            variant="filled"
           />
-        </div>
-        <TextField
-          className={classes.bigTextfield}
-          type="text"
-          value={contactData.message}
-          onChange={(e) => {
-            const val = e.target.value;
-            setContactData((prevState) => {
-              return { ...prevState, message: val };
-            });
-          }}
-          id="outlined-multiline-static"
-          label="Message"
-          multiline
-          rows={10}
-          variant="filled"
-        />
-
+        </FadeInSections>
         <div>
           <Button
             className={classes.submitBtn}

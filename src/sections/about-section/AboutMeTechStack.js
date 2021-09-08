@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./AboutMe.css";
 
 const AboutMeTechStack = () => {
@@ -10,7 +11,9 @@ const AboutMeTechStack = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <motion.img
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "tween", duration: 0.1 }}
             src="tech-stack/icons8-html-5.svg"
             alt="HTML5_Logo"
             className="TechStack"
@@ -23,7 +26,9 @@ const AboutMeTechStack = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <motion.img
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "tween", duration: 0.1 }}
             src="tech-stack/icons8-css3.svg"
             alt="CSS3_Logo"
             className="TechStack"
@@ -36,7 +41,9 @@ const AboutMeTechStack = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <motion.img
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "tween", duration: 0.1 }}
             src="tech-stack/icons8-javascript.svg"
             alt="JS_Logo"
             className="TechStack"
@@ -49,7 +56,9 @@ const AboutMeTechStack = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <motion.img
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "tween", duration: 0.1 }}
             src="tech-stack/icons8-firebase.svg"
             alt="Firebase_Logo"
             className="TechStack"
@@ -62,7 +71,9 @@ const AboutMeTechStack = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <motion.img
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "tween", duration: 0.1 }}
             src="tech-stack/logo192.png"
             alt="React_Logo"
             className="TechStack"
@@ -75,7 +86,9 @@ const AboutMeTechStack = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <motion.img
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "tween", duration: 0.1 }}
             src="tech-stack/icons8-material-ui.svg"
             alt="MUI_Logo"
             className="TechStack MUI"

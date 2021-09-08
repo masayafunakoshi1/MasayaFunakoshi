@@ -26,10 +26,10 @@ const PopperComp = (props) => {
     setAnchorElId(anchorEl ? null : event.currentTarget.children[0].id);
   };
 
-  useEffect(() => {
-    console.log(anchorEl);
-    console.log(anchorElId);
-  }, [anchorEl, anchorElId]);
+  // useEffect(() => {
+  //   console.log(anchorEl);
+  //   console.log(anchorElId);
+  // }, [anchorEl, anchorElId]);
 
   let popoverText;
 
@@ -42,6 +42,9 @@ const PopperComp = (props) => {
       break;
     case "HomePage-Popover-FrontEnd":
       popoverText = "Click me!";
+      break;
+    case "HomePage-Popover-ImgOfMe":
+      popoverText = "Drag me with you!";
       break;
     case "ProjectGif-Popover":
       popoverText = "Hover to watch Gif. Click for more info";
@@ -65,7 +68,7 @@ const PopperComp = (props) => {
       >
         {/* <div className={classes.paper}>Click to hear pronounciation.</div> */}
         {({ TransitionProps }) => (
-          <Fade {...TransitionProps} timeout={400}>
+          <Fade {...TransitionProps} timeout={200}>
             <div className={classes.paper}>{popoverText}</div>
           </Fade>
         )}

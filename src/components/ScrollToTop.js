@@ -49,7 +49,7 @@ const ScrollToTop = () => {
   return (
     <Fab
       aria-label="ScrollToTop"
-      onClick={() => scroll.scrollToTop()}
+      onClick={() => scroll.scrollToTop({ duration: 1000, smooth: "true" })}
       className={scrollPos >= 500 ? classes.ScrollToTopBtn : classes.hidden}
       id="BackToTop-Popover"
     >

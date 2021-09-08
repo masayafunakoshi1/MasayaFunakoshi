@@ -1,6 +1,6 @@
 .AboutMe-Container {
   display: grid;
-  grid-template-rows: 100px 1370px;
+  grid-template-rows: 100px 1470px;
   grid-template-columns: 150px auto 150px;
 }
 .AboutMe-Header {

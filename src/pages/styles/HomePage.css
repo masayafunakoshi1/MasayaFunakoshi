@@ -27,7 +27,7 @@
   grid-template-columns: minmax(100px, 155px) minmax(490px, 500px);
 }
 
-#Second-Line-Name {
+.Second-Line-Name {
   grid-column-start: 2;
 }
 
@@ -58,7 +58,16 @@
   font-size: 30px;
 }
 
-.Homepage-Text-Highlight {
+.Homepage-Text-Highlight-Name {
+  display: inline;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 45px;
+  color: #ffe600;
+  cursor: pointer;
+}
+
+.Homepage-Text-Highlight-FrontEnd {
   display: inline;
   overflow: hidden;
   white-space: nowrap;
@@ -82,6 +91,7 @@
   width: 350px;
   height: 350px;
   border-radius: 50%;
+  cursor: grab;
 }
 
 .Homepage-Text-FirstLine {
@@ -99,6 +109,16 @@
 .Homepage-Text-FirstLine2 {
   grid-column-start: 2;
   margin-left: 10px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .Descriptor-Text {
