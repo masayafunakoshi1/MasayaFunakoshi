@@ -1,6 +1,6 @@
 .Homepage-Container {
   display: grid;
-  grid-template-rows: 700px 100px;
+  grid-template-rows: 700px 150px;
   grid-template-columns: 150px 1fr 150px;
 }
 
@@ -141,4 +141,82 @@
 
 .Homepage-Text-NameContainer {
   text-align: center;
+}
+
+/* Responsive CSS, Screen Widths */
+
+@media only screen and (max-width: 1270px) {
+  .Homepage-Container {
+    grid-template-rows: 700px 150px;
+    grid-template-columns: 50px 1fr 50px;
+  }
+
+  .Homepage-Container-Subgrid {
+    grid-template-rows: 20px 600px;
+  }
+
+  #Second-Line {
+    display: grid;
+    grid-row-start: 2;
+    grid-template-columns: minmax(auto, 300px);
+    grid-template-rows: 1fr 1.5fr;
+  }
+
+  .Second-Line-Name {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .Grid-Item-2 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: center;
+    align-self: baseline;
+  }
+
+  .Homepage-Text {
+    text-align: left;
+    margin-top: 80px;
+  }
+
+  .Homepage-Text-Norm {
+    min-width: 100%;
+    min-height: auto;
+    font-size: 25px;
+  }
+
+  .Homepage-Text-Highlight-Name {
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 35px;
+    color: #ffe600;
+    cursor: pointer;
+  }
+
+  .Homepage-Text-Highlight-FrontEnd {
+    font-size: 35px;
+  }
+
+  .Name-Pronounce {
+    display: inline;
+    min-width: 190px;
+    min-height: 61px;
+    font-size: 30px;
+  }
+
+  .Homepage-Img {
+    max-width: 350px;
+    max-height: 350px;
+    width: 250px;
+    height: 250px;
+    min-width: 200px;
+    min-height: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 480px) {
 }

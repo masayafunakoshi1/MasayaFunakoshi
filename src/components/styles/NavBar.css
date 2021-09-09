@@ -45,3 +45,61 @@
   justify-self: end;
   align-content: center;
 }
+
+/* Responsive CSS, Screen Widths */
+
+@media only screen and (max-width: 1270px) {
+  .NavBar-Container {
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr 100px;
+    grid-template-rows: 120px;
+  }
+
+  .NavBar-Items {
+    font-size: 22px;
+    margin: 0 25px 0 40px;
+    padding-left: 15px;
+  }
+
+  .NavBar-Items:hover {
+    cursor: pointer;
+    color: #ffe600;
+  }
+
+  /* NavBar Items */
+
+  .Title {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .Title:hover {
+    cursor: pointer;
+  }
+
+  .Title-Code {
+    margin-left: 50px;
+  }
+
+  .NavBar-Items-All {
+    margin-left: 20px;
+  }
+
+  .Grid-Item-NavBar-1 {
+    grid-column-start: 2;
+    justify-self: start;
+    align-content: center;
+  }
+
+  .Grid-Item-NavBar-3 {
+    grid-column-start: 3;
+    justify-self: end;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 480px) {
+}

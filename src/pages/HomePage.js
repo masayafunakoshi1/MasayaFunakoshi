@@ -33,13 +33,11 @@ const HomePage = ({ scrollPos }) => {
   const getRandomColor = () => {
     let newColorNum = Math.floor(Math.random() * 12);
     setNewColorHex(newColorNum);
-    console.log("clicked");
   };
 
   useEffect(() => {
     if (scrollPos >= 200) {
       setDoneType(true);
-      console.log("true");
     }
   }, [scrollPos]);
 
@@ -66,7 +64,7 @@ const HomePage = ({ scrollPos }) => {
             My name is
             {doneType ? (
               <div
-                className="Pronounce-Container"
+                className="Pronounce-Container Second-Line-Name"
                 onMouseEnter={() => setPronounce(true)}
                 onMouseLeave={() => setPronounce(false)}
               >
@@ -83,7 +81,7 @@ const HomePage = ({ scrollPos }) => {
                 ) : (
                   <PopperComp>
                     <span
-                      className="Homepage-Text-Highlight-Name Name-Pronounce"
+                      className="Homepage-Text-Highlight-Name Name-Pronounce Second-Line-Name"
                       onClick={namePronounce}
                       id="HomePage-Popover-Name"
                     >
@@ -93,7 +91,7 @@ const HomePage = ({ scrollPos }) => {
                 )}
               </div>
             ) : (
-              <div>
+              <div className="Second-Line-Name">
                 <Typing speed={30} startDelay={1300}>
                   <h1
                     className="Homepage-Text-Highlight-Name"

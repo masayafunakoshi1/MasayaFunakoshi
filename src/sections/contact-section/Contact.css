@@ -86,3 +86,78 @@ a:active {
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(41deg)
     brightness(106%) contrast(104%);
 }
+
+/* Responsive CSS, Screen Widths */
+
+@media only screen and (max-width: 1270px) {
+  .ContactPage-Container {
+    display: grid;
+    grid-template-rows: 150px 700px;
+    grid-template-columns: 100px auto 100px;
+  }
+
+  .ContactPage-Header {
+    grid-column-start: 2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .ContactPage-Subgrid {
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ContactPage-ContactInfo {
+    display: grid;
+    grid-column-start: 2;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .ContactPage-ContactInfo-Socials {
+    display: grid;
+    grid-row-start: 3;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .ContactInfo-Location {
+    grid-row-start: 1;
+    justify-self: start;
+  }
+  .ContactInfo-Email {
+    grid-row-start: 2;
+    justify-self: start;
+  }
+
+  .Contact-Info-Text {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 30px;
+  }
+
+  .location {
+    max-height: auto;
+    max-width: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+  .email {
+    max-height: auto;
+    max-width: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .Socials {
+    max-width: 65px;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 480px) {
+}

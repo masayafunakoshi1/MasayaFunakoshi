@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => ({
     transition: "ease-in-out",
     transitionDuration: "0.3s",
     opacity: "100%",
+    overflow: "hidden",
+    [theme.breakpoints.down("md")]: {
+      left: "92%",
+    },
   },
   keyUpIcon: {
     display: "flex",
@@ -40,7 +44,6 @@ const ScrollToTop = ({ scrollPos, setScrollPos }) => {
   const classes = useStyles();
 
   const scrollFunc = () => {
-    console.log(window.scrollY);
     setScrollPos(window.scrollY);
   };
 

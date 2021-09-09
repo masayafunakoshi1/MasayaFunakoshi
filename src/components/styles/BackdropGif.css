@@ -116,3 +116,66 @@
     grid-template-rows: repeat(2, 117.5px);
   }
 }
+
+/* Responsive CSS, Screen Widths */
+
+@media only screen and (max-width: 1270px) {
+  .Backdrop-Container {
+    height: 300px;
+    width: 40%;
+
+    max-height: 249px;
+    max-width: 500px;
+
+    min-height: auto;
+    min-width: 150px;
+  }
+
+  .Backdrop-Subgrid {
+    grid-template-rows: 40px 1fr;
+  }
+
+  .Backdrop-SubSubgrid {
+    grid-row-start: 2;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .AppTitle {
+    font-size: 20pt;
+  }
+  #Github:hover {
+    max-width: 50px;
+  }
+
+  #Github {
+    max-width: 45px;
+    max-height: auto;
+  }
+
+  #Live-Demo:hover {
+    width: 65px;
+    height: 45px;
+  }
+
+  .Project-Description {
+    font-size: 1.8vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 480px) {
+}
+
+@media screen and (min-width: 1600px) {
+  .Projects-Gifs {
+    max-height: auto;
+    height: 310px;
+    min-height: 150px;
+    max-width: auto;
+    width: 510px;
+    min-width: 350px;
+  }
+}

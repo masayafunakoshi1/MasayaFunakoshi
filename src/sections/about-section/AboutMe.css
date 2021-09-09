@@ -18,8 +18,7 @@
   grid-row-start: 1;
   grid-template-columns: repeat(2, 1fr);
 }
-/* .AboutMe-SubSubSubgrid {
-} */
+
 .AboutMe-PictureSubgrid {
   display: grid;
   grid-column-start: 1;
@@ -97,4 +96,73 @@
 .AboutMe-Link-Text {
   text-decoration: underline;
   color: white;
+}
+
+/* Responsive CSS, Screen Widths */
+
+@media only screen and (max-width: 1270px) {
+  .AboutMe-Container {
+    display: grid;
+    grid-template-rows: 100px 1800px;
+    grid-template-columns: 100px auto 100px;
+  }
+  .AboutMe-Header {
+    grid-column-start: 2;
+    margin-top: 20px;
+  }
+  .AboutMe-Subgrid {
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-template-rows: 470px 1fr;
+  }
+  .AboutMe-SubSubgrid {
+    display: grid;
+    grid-row-start: 1;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .AboutMe-PictureSubgrid {
+    display: grid;
+    grid-column-start: 1;
+    grid-template-columns: 20px auto 20px;
+    grid-template-rows: 0px minmax(auto, 446px) 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .PicOfMe {
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+    max-width: 530px;
+    max-height: 383px;
+    width: 100%;
+    height: auto;
+  }
+
+  .AboutMe-TechStackSubgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 223px) minmax(auto, auto);
+  }
+  .AboutMe-TextSubgrid {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    grid-template-rows: minmax(auto, 500px);
+  }
+
+  .TechStack {
+    max-height: auto;
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 480px) {
 }
