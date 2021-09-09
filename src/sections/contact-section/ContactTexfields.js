@@ -46,7 +46,7 @@ const ContactTexfields = () => {
     // },
     notchedOutline: {
       borderWidth: "1px",
-      borderColor: "white !important",
+      borderColor: "white",
     },
     smallTextfield: {
       background: "#FAFAFA",
@@ -61,6 +61,7 @@ const ContactTexfields = () => {
     },
     submitBtn: {
       left: "28%",
+      filter: "invert(100%) ",
     },
     typography: {
       padding: theme.spacing(2),
@@ -75,11 +76,6 @@ const ContactTexfields = () => {
         <FadeInSections>
           <TextField
             className={classes.smallTextfield}
-            InputProps={{
-              classes: {
-                notchedOutline: classes.notchedOutline,
-              },
-            }}
             type="text"
             label="Full-Name"
             variant="filled"

@@ -1,16 +1,61 @@
 .SideNavBar-Container {
   display: grid;
-  max-width: 100px;
-  max-height: 800px;
-  background-color: gray;
+  position: fixed;
+  visibility: visible;
+  left: 0;
+  top: 25%;
+  min-width: 80px;
+  min-height: 430px;
+  max-width: 90px;
+  max-height: 480px;
+  background-color: rgb(0, 0, 0);
   grid-template-rows: repeat(4, 1fr);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .SideNavBar-Home {
+  justify-content: center;
+  align-items: center;
 }
 .SideNavBar-Projects {
+  justify-content: center;
+  align-items: center;
 }
 .SideNavBar-About {
+  justify-content: center;
+  align-items: center;
 }
 .SideNavBar-Contact {
+  justify-content: center;
+  align-items: center;
+}
+
+.SideNavBar-Icons {
+  max-width: 40px;
+  max-height: auto;
+  cursor: pointer;
+}
+
+.SideNavBar-Icons:hover {
+  max-width: 45px;
+  max-height: auto;
+  cursor: pointer;
+  filter: invert(74%) sepia(88%) saturate(690%) hue-rotate(1deg)
+    brightness(106%) contrast(106%);
+}
+
+/* .SideNavBar-HomeIcon {
+}
+
+.SideNavBar-ProjectsIcon {
+}
+.SideNavBar-AboutIcon {
+}
+.SideNavBar-ContactIcon {
+} */
+
+.invert-color {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(41deg)
+    brightness(106%) contrast(104%);
 }

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Typing from "react-typing-animation";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import "./styles/HomePage.css";
 import PopperComp from "../components/PopperComp";
 
 let audio = new Audio("/NamePronounciation.mp3");
 
-const HomePage = () => {
+const HomePage = ({ scrollPos }) => {
   const [doneType, setDoneType] = useState(false);
   const [pronounce, setPronounce] = useState(false);
   const [newColorHex, setNewColorHex] = useState(null);
@@ -15,7 +15,6 @@ const HomePage = () => {
     "#FF0000",
     "#FF00AB",
     "#AB00FF",
-    // "#3300FF",
     "#4D00FF",
     "#0044FF",
     "#00C4FF",
@@ -24,8 +23,6 @@ const HomePage = () => {
     "#00FF2B",
     "#B3FF00",
     "#F7FF00",
-    // "#FFAB00",
-    // "#FF4D00",
     "#ffe600",
   ];
 
@@ -34,11 +31,17 @@ const HomePage = () => {
   };
 
   const getRandomColor = () => {
-    // 16777215 (decimal) == ffffff in hexidecimal
     let newColorNum = Math.floor(Math.random() * 12);
     setNewColorHex(newColorNum);
     console.log("clicked");
   };
+
+  useEffect(() => {
+    if (scrollPos >= 200) {
+      setDoneType(true);
+      console.log("true");
+    }
+  }, [scrollPos]);
 
   return (
     <div className="Homepage-Container" id="home">
@@ -91,7 +94,7 @@ const HomePage = () => {
               </div>
             ) : (
               <div>
-                <Typing speed={60} startDelay={1300}>
+                <Typing speed={30} startDelay={1300}>
                   <h1
                     className="Homepage-Text-Highlight-Name"
                     id="Second-Line-Name"
@@ -114,25 +117,40 @@ const HomePage = () => {
               >
                 A
               </motion.div>
-
-              <Typing
-                speed={70}
-                startDelay={6500}
-                onFinishedTyping={() => setDoneType(true)}
-                className="Homepage-Text-FirstLine2"
-              >
-                <PopperComp>
-                  <motion.h2
-                    animate={{ color: colors[newColorHex] }}
-                    transition={{ type: "spring" }}
-                    onTap={() => getRandomColor()}
-                    className="Homepage-Text-Highlight-FrontEnd "
-                    id="HomePage-Popover-FrontEnd"
-                  >
-                    Front-End Developer
-                  </motion.h2>
-                </PopperComp>
-              </Typing>
+              {doneType ? (
+                <div className="Homepage-Text-FirstLine2">
+                  <PopperComp>
+                    <motion.h2
+                      animate={{ color: colors[newColorHex] }}
+                      transition={{ type: "spring" }}
+                      onTap={() => getRandomColor()}
+                      className="Homepage-Text-Highlight-FrontEnd "
+                      id="HomePage-Popover-FrontEnd"
+                    >
+                      Front-End Developer
+                    </motion.h2>
+                  </PopperComp>
+                </div>
+              ) : (
+                <Typing
+                  speed={30}
+                  startDelay={6500}
+                  onFinishedTyping={() => setDoneType(true)}
+                  className="Homepage-Text-FirstLine2"
+                >
+                  <PopperComp>
+                    <motion.h2
+                      animate={{ color: colors[newColorHex] }}
+                      transition={{ type: "spring" }}
+                      onTap={() => getRandomColor()}
+                      className="Homepage-Text-Highlight-FrontEnd "
+                      id="HomePage-Popover-FrontEnd"
+                    >
+                      Front-End Developer
+                    </motion.h2>
+                  </PopperComp>
+                </Typing>
+              )}
             </div>
             <motion.div
               initial={{ opacity: 0 }}

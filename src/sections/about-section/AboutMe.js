@@ -24,7 +24,6 @@ const AboutMe = () => {
           <FadeInSections>
             <AboutMeTechStack />
           </FadeInSections>
-
           {/* </div> */}
         </div>
         <div className="AboutMe-TextSubgrid">
@@ -57,8 +56,8 @@ const AboutMe = () => {
                 </a>
                 , teaching me the basics of HTML and CSS. It wasn't a "Hello
                 World!" for me, no, it was when I was able to change the size
-                and color of a blue &#60;div&#62; to red with CSS. It blew my
-                mind. I was hooked. I had to know more.
+                and color of a blue HTML &#60;div&#62; to red with a seperate
+                CSS doc. It blew my mind. I was hooked. I had to know more.
               </p>
               <p>
                 Throughout this journey, it's been a series of ups and downs.
