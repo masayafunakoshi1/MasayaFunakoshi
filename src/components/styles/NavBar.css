@@ -5,9 +5,11 @@
 }
 
 .NavBar-Items {
+  display: flex;
   font-size: 22px;
-  margin: 0 35px 0 40px;
+  margin: 0px 35px 0 40px;
   padding-left: 30px;
+  display: inline;
 }
 
 .NavBar-Items:hover {
@@ -27,7 +29,7 @@
 }
 
 .Title-Code {
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .NavBar-Items-All {
@@ -35,15 +37,14 @@
 }
 
 .Grid-Item-NavBar-1 {
+  display: flex;
   grid-column-start: 2;
-  justify-self: start;
-  align-content: center;
+  margin-left: 10%;
+  align-items: center;
 }
 
 .Grid-Item-NavBar-3 {
   grid-column-start: 3;
-  justify-self: end;
-  align-content: center;
 }
 
 /* Responsive CSS, Screen Widths */
@@ -71,6 +72,7 @@
   .Title {
     font-size: 30px;
     cursor: pointer;
+    line-height: 5px;
   }
 
   .Title:hover {
@@ -102,4 +104,35 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .NavBar-Container {
+    display: grid;
+    grid-template-columns: 25px 2fr 2fr 25px;
+    grid-template-rows: 120px;
+  }
+
+  .NavBar-Items {
+    display: none;
+  }
+
+  /* NavBar Items */
+
+  .Title {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .Title:hover {
+    cursor: pointer;
+  }
+
+  .Title-Code {
+    margin-left: 0px;
+  }
+
+  .Grid-Item-NavBar-1 {
+    grid-column-start: 2;
+    justify-self: start;
+    align-content: center;
+    line-height: 4ch;
+  }
 }

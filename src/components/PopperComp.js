@@ -52,23 +52,26 @@ const PopperComp = (props) => {
     case "ProjectGif-Popover-UnderDevelopment":
       popoverText = "🛠 Currently under development ⚒";
       break;
-    case "Home-Icon":
-      popoverText = "Home";
-      break;
-    case "Projects-Icon":
-      popoverText = "Projects";
-      break;
-    case "About-Icon":
-      popoverText = "About Me";
-      break;
-    case "Contact-Icon":
-      popoverText = "Contact";
-      break;
+    // case "Home-Icon":
+    //   popoverText = "Home";
+    //   break;
+    // case "Projects-Icon":
+    //   popoverText = "Projects";
+    //   break;
+    // case "About-Icon":
+    //   popoverText = "About Me";
+    //   break;
+    // case "Contact-Icon":
+    //   popoverText = "Contact";
+    //   break;
+    // case "Navigation":
+    //   popoverText = "SideNav-PullOut";
+    //   break;
   }
 
   return (
     <>
-      <div onMouseEnter={handleHover} onMouseLeave={() => setAnchorEl(null)}>
+      <div onMouseOver={handleHover} onMouseOut={() => setAnchorEl(null)}>
         {props.children}
       </div>
       <Popper

@@ -219,4 +219,115 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .Homepage-Container {
+    grid-template-rows: 700px 250px;
+    grid-template-columns: 25px 1fr 25px;
+  }
+
+  .Homepage-Container-Subgrid {
+    grid-template-rows: 20px 600px;
+    grid-template-columns: 1fr;
+  }
+
+  .Grid-Item-1 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 3fr;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    justify-self: center;
+  }
+
+  #First-Line {
+    grid-row-start: 2;
+    margin-top: 250px;
+  }
+
+  .Homepage-Text-FirstLine {
+    display: grid;
+    grid-template-columns: minmax(30px, 40px) minmax(auto, 420px) 1fr;
+    text-align: left;
+    min-height: 66px;
+    grid-row-start: 1;
+  }
+
+  .Homepage-Text-FirstLine1 {
+    grid-row-start: 1;
+  }
+
+  .Homepage-Text-FirstLine2 {
+    grid-column-start: 2;
+    margin-left: 0px;
+  }
+
+  .Second-Line-Name {
+    grid-column-start: 2;
+  }
+
+  #Second-Line {
+    display: grid;
+    grid-row-start: 3;
+    grid-template-columns: minmax(auto, 300px);
+    grid-template-rows: 1fr 1.5fr;
+  }
+
+  #Third-Line {
+    display: grid;
+    grid-row-start: 4;
+    grid-template-rows: minmax(66px, 70px) minmax(66px, 70px) minmax(66px, 70px) minmax(
+        66px,
+        70px
+      );
+  }
+  .Second-Line-Name {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .Grid-Item-2 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    justify-self: center;
+    align-self: baseline;
+  }
+
+  .Homepage-Text {
+    text-align: left;
+    margin-top: 80px;
+  }
+
+  .Homepage-Text-Norm {
+    min-width: 100%;
+    min-height: auto;
+    font-size: 25px;
+  }
+
+  .Homepage-Text-Highlight-Name {
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 26px;
+    color: #ffe600;
+    cursor: pointer;
+  }
+
+  .Homepage-Text-Highlight-FrontEnd {
+    font-size: 26px;
+  }
+
+  .Name-Pronounce {
+    display: inline;
+    min-width: 190px;
+    min-height: 61px;
+    font-size: 30px;
+  }
+
+  .Homepage-Img {
+    max-width: 350px;
+    max-height: 350px;
+    width: 280px;
+    height: 280px;
+    min-width: 200px;
+    min-height: 200px;
+    margin-top: 30px;
+  }
 }

@@ -54,7 +54,7 @@ const ContactTexfields = () => {
       marginBottom: "30px",
       colorSecondary: "white",
       [theme.breakpoints.down("sm")]: {
-        width: "25ch",
+        width: "70%",
       },
     },
     bigTextfield: {
@@ -62,11 +62,11 @@ const ContactTexfields = () => {
       width: "35ch",
       marginBottom: "10px",
       [theme.breakpoints.down("sm")]: {
-        width: "25ch",
+        width: "70%",
       },
     },
     submitBtn: {
-      left: "28%",
+      left: "24%",
       filter: "invert(100%) ",
     },
     typography: {

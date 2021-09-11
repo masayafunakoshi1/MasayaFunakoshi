@@ -150,7 +150,7 @@
 
   #Github {
     max-width: 45px;
-    max-height: auto;
+    max-height: 45px;
   }
 
   #Live-Demo:hover {
@@ -167,6 +167,70 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .Backdrop-Container {
+    height: 300px;
+    width: 85%;
+
+    max-height: 249px;
+    max-width: 500px;
+
+    min-height: auto;
+    min-width: 150px;
+  }
+
+  .Backdrop-Subgrid {
+    grid-template-rows: 40px 1fr;
+  }
+
+  .Backdrop-SubSubgrid {
+    grid-row-start: 2;
+    grid-template-columns: repeat(2, 1fr) 80px;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .AppTitle {
+    font-size: 20pt;
+  }
+  #Github:hover {
+    max-width: 50px;
+  }
+
+  #Github {
+    max-width: 45px;
+    max-height: auto;
+  }
+
+  #Live-Demo {
+    width: 50px;
+    height: 35px;
+  }
+
+  #Live-Demo:hover {
+    width: 65px;
+    height: 45px;
+  }
+
+  .Project-Description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 12pt;
+    margin-top: 0px;
+  }
+
+  .Src-Code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+  }
+
+  .Demo {
+    grid-column-start: 3;
+    width: 65px;
+    height: 45px;
+  }
 }
 
 @media screen and (min-width: 1600px) {

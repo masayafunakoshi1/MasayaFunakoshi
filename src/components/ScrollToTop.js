@@ -19,6 +19,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       left: "92%",
     },
+    [theme.breakpoints.down("sm")]: {
+      left: "78%",
+      top: "88%",
+      zIndex: "100",
+      width: "50px",
+      height: "50px",
+    },
   },
   keyUpIcon: {
     display: "flex",
@@ -28,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     marginTop: "20px",
     maxHeight: "40px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "40pt",
+      marginTop: "13px",
+    },
   },
   hidden: {
     opacity: "0%",

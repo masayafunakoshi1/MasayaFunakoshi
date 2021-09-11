@@ -160,4 +160,55 @@ a:active {
 }
 
 @media only screen and (max-width: 480px) {
+  .ContactPage-Container {
+    display: grid;
+    grid-template-rows: 150px 1200px;
+    grid-template-columns: 25px auto 25px;
+  }
+
+  .ContactPage-Header {
+    grid-column-start: 2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .ContactPage-Subgrid {
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-template-columns: 1fr;
+  }
+
+  .ContactPage-ContactInfo {
+    grid-column-start: 1;
+  }
+  .ContactPage-ContactInfo-Socials {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Contact-Info-Text {
+    display: flex;
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: 95%;
+  }
+
+  .location {
+    max-height: auto;
+    max-width: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+  .email {
+    max-height: auto;
+    max-width: 50px;
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+
+  .Socials {
+    max-width: 60px;
+    margin-left: 0px;
+  }
 }
