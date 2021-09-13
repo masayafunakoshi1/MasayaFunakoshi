@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     height: "65px",
     transition: "ease-in-out",
     transitionDuration: "0.3s",
-    opacity: "100%",
+    opacity: "1",
     overflow: "hidden",
     [theme.breakpoints.down("md")]: {
       left: "92%",
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   hidden: {
-    opacity: "0%",
+    opacity: "0",
     pointerEvents: "none",
     top: "88%",
     left: "93%",
