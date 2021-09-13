@@ -5,6 +5,7 @@ import "./Contact.css";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import emailjs from "emailjs-com";
 
 const ContactTexfields = () => {
   const [contactData, setContactData] = useState({
@@ -29,14 +30,43 @@ const ContactTexfields = () => {
   };
 
   const handleSubmit = () => {
-    console.log(contactData);
+    sendEmail();
+    resetForm();
+    setValidation(true);
+  };
+
+  const sendEmail = () => {
+    let templateParams = {
+      from_name: `${contactData.fullName} - ${contactData.email}`,
+      to_name: "masayafunakoshi1@gmail.com",
+      subject: contactData.subject,
+      message: contactData.message,
+    };
+
+    emailjs
+      .send(
+        "MasayaFunakoshi_Gmail",
+        "template_sy50nvw",
+        templateParams,
+        "user_ph9ZjY5dtwpN9mMnjDOuv"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const resetForm = () => {
     setContactData({
       email: "",
       fullName: "",
       message: "",
       subject: "",
     });
-    setValidation(true);
   };
 
   //Styles
