@@ -1,55 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./styles/NavBar.css";
 
 const NavBar = () => {
+  const [showCodeTitle, setShowCodeTitle] = useState(false);
+
   return (
     <nav className="NavBar-Container">
       <div className="Grid-Item-NavBar-1">
         <span>
-          <Link className="Title">masaya funakoshi</Link>
-          <Link className="Title-Code">
-            <span>&#60;</span>
-            mf <span>&#47;</span>
-            <span>&#62;</span>
+          <Link
+            className="Title"
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={1500}
+            onMouseEnter={() => setShowCodeTitle(true)}
+            onMouseLeave={() => setShowCodeTitle(false)}
+          >
+            {!showCodeTitle ? (
+              <span>masaya funakoshi</span>
+            ) : (
+              <span className="Title-Code">
+                <>&#60;</>
+                mf <>&#47;</>
+                <>&#62;</>
+              </span>
+            )}
           </Link>
         </span>
       </div>
-      <div className="NavBar-Items-All Grid-Item-NavBar-3">
-        <span className="NavBar-Items">
+      <ul className="NavBar-Items-All Grid-Item-NavBar-3">
+        <li className="NavBar-Items">
           <Link
             activeClass="active"
             to="projects"
             spy={true}
             smooth={true}
-            duration={1000}
+            duration={1500}
+            offset={-50}
           >
-            Projects
+            Project
           </Link>
-        </span>
-        <span className="NavBar-Items">
+        </li>
+        <li className="NavBar-Items">
           <Link
             activeClass="active"
             to="about"
             spy={true}
             smooth={true}
-            duration={1000}
+            duration={1500}
+            offset={-50}
           >
             About
           </Link>
-        </span>
-        <span className="NavBar-Items">
+        </li>
+        <li className="NavBar-Items">
           <Link
             activeClass="active"
-            to="content"
+            to="contact"
             spy={true}
             smooth={true}
-            duration={1000}
+            duration={1500}
           >
             Contact
           </Link>
-        </span>
-      </div>
+        </li>
+      </ul>
     </nav>
   );
 };

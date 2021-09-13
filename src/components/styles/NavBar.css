@@ -1,35 +1,155 @@
 .NavBar-Container {
   display: grid;
   grid-template-columns: 150px 1fr 2fr 150px;
+  grid-template-rows: 120px;
 }
 
 .NavBar-Items {
-  font-size: 20px;
-  margin: 0 45px 0 40px;
+  display: flex;
+  font-size: 22px;
+  margin: 0px 35px 0 40px;
+  padding-left: 30px;
+  display: inline;
+}
+
+.NavBar-Items:hover {
+  cursor: pointer;
+  color: #ffe600;
 }
 
 /* NavBar Items */
 
 .Title {
-  font-size: 28px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.Title:hover {
+  cursor: pointer;
 }
 
 .Title-Code {
-  display: none;
+  margin-left: 20px;
 }
 
 .NavBar-Items-All {
-  margin-left: 220px;
+  margin-left: 250px;
 }
 
 .Grid-Item-NavBar-1 {
+  display: flex;
   grid-column-start: 2;
-  justify-self: start;
-  align-content: center;
+  margin-left: 10%;
+  align-items: center;
 }
 
 .Grid-Item-NavBar-3 {
   grid-column-start: 3;
-  justify-self: end;
-  align-content: center;
+}
+
+/* Responsive CSS, Screen Widths */
+
+@media only screen and (max-width: 1270px) {
+  .NavBar-Container {
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr 100px;
+    grid-template-rows: 120px;
+  }
+
+  .NavBar-Items {
+    font-size: 22px;
+    margin: 0 25px 0 40px;
+    padding-left: 15px;
+  }
+
+  .NavBar-Items:hover {
+    cursor: pointer;
+    color: #ffe600;
+  }
+
+  /* NavBar Items */
+
+  .Title {
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 5px;
+  }
+
+  .Title:hover {
+    cursor: pointer;
+  }
+
+  .Title-Code {
+    margin-left: 50px;
+  }
+
+  .NavBar-Items-All {
+    margin-left: 20px;
+  }
+
+  .Grid-Item-NavBar-1 {
+    grid-column-start: 2;
+    justify-self: start;
+    align-content: center;
+    line-height: 4ch;
+  }
+
+  .Grid-Item-NavBar-3 {
+    grid-column-start: 3;
+    justify-self: end;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .NavBar-Container {
+    display: grid;
+    grid-template-columns: 25px 2fr 2fr 25px;
+    grid-template-rows: 120px;
+  }
+
+  .NavBar-Items {
+    display: none;
+  }
+
+  /* NavBar Items */
+
+  .Title {
+    font-size: 35px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .NavBar-Container {
+    display: grid;
+    grid-template-columns: 25px 2fr 2fr 25px;
+    grid-template-rows: 120px;
+  }
+
+  .NavBar-Items {
+    display: none;
+  }
+
+  /* NavBar Items */
+
+  .Title {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .Title:hover {
+    cursor: pointer;
+  }
+
+  .Title-Code {
+    margin-left: 0px;
+  }
+
+  .Grid-Item-NavBar-1 {
+    grid-column-start: 2;
+    justify-self: start;
+    align-content: center;
+    line-height: 4ch;
+  }
 }

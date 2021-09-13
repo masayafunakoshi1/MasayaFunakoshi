@@ -1,152 +1,107 @@
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+import FadeInSections from "../../components/FadeInSections";
+import ContactTexfields from "./ContactTexfields";
 import "./Contact.css";
 
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-
 const Contact = () => {
-  const [contactData, setContactData] = useState({
-    email: "",
-    fullName: "",
-    message: "",
-    subject: "",
-  });
-  const [validation, setValidation] = useState(true);
-
-  const validationChecker = () => {
-    if (
-      contactData.email !== "" &&
-      contactData.fullName !== "" &&
-      contactData.message !== "" &&
-      contactData.subject !== ""
-    ) {
-      setValidation(false);
-    } else {
-      setValidation(true);
-    }
-  };
-
-  const handleSubmit = () => {
-    console.log(contactData);
-    setContactData({
-      email: "",
-      fullName: "",
-      message: "",
-      subject: "",
-    });
-    setValidation(true);
-  };
-
-  //Styles
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      marginTop: "10%",
-    },
-    smallTextfield: {
-      background: "#FAFAFA",
-      width: "35ch",
-      marginBottom: "30px",
-    },
-    bigTextfield: {
-      background: "#FAFAFA",
-      width: "35ch",
-      marginBottom: "10px",
-    },
-    submitBtn: {
-      left: "28%",
-    },
-    typography: {
-      padding: theme.spacing(2),
-    },
-  }));
-
-  const classes = useStyles();
-
   return (
-    <div className="ContactPage-Container">
+    <div className="ContactPage-Container" id="contact">
+      <div className="ContactPage-Header Section-Header">
+        <FadeInSections>Contact Me</FadeInSections>
+      </div>
       <div className="ContactPage-Subgrid">
-        <div className="ContactPage-Form" onChange={validationChecker}>
-          <form noValidate autoComplete="off" className={classes.root}>
-            <TextField
-              className={classes.smallTextfield}
-              type="text"
-              id="filled-basic"
-              label="Full-Name"
-              variant="outlined"
-              value={contactData.fullName}
-              onChange={(e) => {
-                const val = e.target.value;
-                setContactData((prevState) => {
-                  return { ...prevState, fullName: val };
-                });
-              }}
-            />
-            <div>
-              <TextField
-                className={classes.smallTextfield}
-                type="text"
-                id="filled-basic"
-                label="Email"
-                variant="outlined"
-                value={contactData.email}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  setContactData((prevState) => {
-                    return { ...prevState, email: val };
-                  });
-                }}
-              />
-            </div>
-            <div>
-              <TextField
-                className={classes.smallTextfield}
-                type="text"
-                id="filled-basic"
-                label="Subject"
-                variant="outlined"
-                value={contactData.subject}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  setContactData((prevState) => {
-                    return { ...prevState, subject: val };
-                  });
-                }}
-              />
-            </div>
-            <TextField
-              className={classes.bigTextfield}
-              type="text"
-              value={contactData.message}
-              onChange={(e) => {
-                const val = e.target.value;
-                setContactData((prevState) => {
-                  return { ...prevState, message: val };
-                });
-              }}
-              id="outlined-multiline-static"
-              label="Message"
-              multiline
-              rows={10}
-              variant="outlined"
-            />
-
-            <div>
-              <Button
-                className={classes.submitBtn}
-                disabled={validation}
-                variant="contained"
-                color="default"
-                onClick={handleSubmit}
-              >
-                {" "}
-                Submit{" "}
-              </Button>
-            </div>
-          </form>
-        </div>
+        <ContactTexfields />
         <div className="ContactPage-ContactInfo">
-          <div className="ContactPage-ContactInfo-Socials"></div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "tween", duration: 0.3 }}
+            className="ContactInfo-Location"
+          >
+            <FadeInSections>
+              <a
+                href="https://www.google.com/maps/place/Westchester+County,+NY/@41.1187086,-74.0131808,10z/data=!3m1!4b1!4m5!3m4!1s0x89c2c96a9d6b59af:0x370ed86222bddb89!8m2!3d41.1220194!4d-73.7948516"
+                target="_blank"
+              >
+                <img
+                  src="images/icons8-location-100.png"
+                  alt="Location-Icon"
+                  className="location invert-color"
+                />
+                <span className="Contact-Info-Text">Westchester, New York</span>
+              </a>
+            </FadeInSections>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "tween", duration: 0.3 }}
+            className="ContactInfo-Email"
+          >
+            <FadeInSections>
+              <a
+                href="mailto:masayafunakoshi1@gmail.com?subject=Subject&body=message%20goes%20here"
+                className="contactsText"
+              >
+                <img
+                  src="images/icons8-email-128.png"
+                  alt="Email-Icon"
+                  className="email invert-color"
+                />
+                <span className="Contact-Info-Text">
+                  masayafunakoshi1@gmail.com
+                </span>
+              </a>
+            </FadeInSections>
+          </motion.div>
+
+          <div className="ContactPage-ContactInfo-Socials">
+            <div className="LinkedIn">
+              <a
+                href="https://www.linkedin.com/in/masayafunakoshi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.img
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "tween", duration: 0.3 }}
+                  src="images/icons8-linkedin.svg"
+                  alt="LinkedIn-Icon"
+                  className="Socials"
+                />
+              </a>
+            </div>
+            <div className="Github invert-color">
+              <a
+                href="https://github.com/masayafunakoshi1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.img
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "tween", duration: 0.3 }}
+                  src="images/icons8-github-250.png"
+                  alt="Github-Icon"
+                  className="Socials"
+                />
+              </a>
+            </div>
+            <div className="Codepen invert-color">
+              <a
+                href="https://codepen.io/mfunakoshi98/pens/public"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.img
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "tween", duration: 0.3 }}
+                  src="images/icons8-codepen-100.png"
+                  alt="Codepen-Icon"
+                  className="Socials"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
