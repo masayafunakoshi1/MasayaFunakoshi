@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme) => ({
       left: "92%",
     },
     [theme.breakpoints.down("sm")]: {
-      left: "78%",
+      left: "80%",
       top: "88%",
       zIndex: "100",
-      width: "50px",
-      height: "50px",
+      width: "60px",
+      height: "60px",
     },
   },
   keyUpIcon: {

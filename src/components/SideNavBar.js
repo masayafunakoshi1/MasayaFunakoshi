@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
-import PopperComp from "./PopperComp";
+import { debounce } from "lodash";
 import { ClickAwayListener } from "@material-ui/core";
 import "./styles/SideNavBar.css";
 
 const SideNavBar = ({ scrollPos }) => {
   const [navbarActive, setNavbarActive] = useState(false);
   const [widthMobile, setWidthMobile] = useState(false);
+  const [widthPx, setWidthPx] = useState(0);
   const [sideNavPull, setSideNavPull] = useState(false);
 
   useEffect(() => {
@@ -18,13 +19,27 @@ const SideNavBar = ({ scrollPos }) => {
     }
   }, [scrollPos]);
 
-  useEffect(() => {
-    if (window.innerWidth <= 490) {
+  const widthChecker = () => {
+    if (window.innerWidth <= 768) {
       setWidthMobile(true);
     } else {
       setWidthMobile(false);
     }
+  };
+
+  const debounceWidth = useMemo(() => debounce(widthChecker, 300), []);
+
+  useEffect(() => {
+    window.addEventListener("resize", debounceWidth);
   }, []);
+
+  // useEffect(() => {
+  //   if (window.innerWidth <= 490) {
+  //     setWidthMobile(true);
+  //   } else {
+  //     setWidthMobile(false);
+  //   }
+  // }, []);
 
   if (!widthMobile) {
     return (
@@ -199,19 +214,17 @@ const SideNavBar = ({ scrollPos }) => {
             </motion.div>
           </ClickAwayListener>
         ) : (
-          <PopperComp>
-            <motion.div
-              initial={{ x: -20 }}
-              animate={{ x: 0 }}
-              exit={{ x: -20 }}
-              transition={{ type: "spring", stiffness: 40 }}
-              onClick={() => setSideNavPull(true)}
-              className="SideNavBar-PullBtn"
-              id="SideNav-PullOut"
-            >
-              <span>&#10095;</span>
-            </motion.div>
-          </PopperComp>
+          <motion.div
+            initial={{ x: -20 }}
+            animate={{ x: 0 }}
+            exit={{ x: -20 }}
+            transition={{ type: "spring", stiffness: 40 }}
+            onClick={() => setSideNavPull(true)}
+            className="SideNavBar-PullBtn"
+            id="SideNav-PullOut"
+          >
+            <span>&#10095;</span>
+          </motion.div>
         )}
       </AnimatePresence>
     );

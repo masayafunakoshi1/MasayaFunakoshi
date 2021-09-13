@@ -29,7 +29,6 @@ const ProjectsPreview = () => {
     if (backdropShow === num) {
       setBackdropShow(null);
     } else {
-      console.log("showing");
       setBackdropShow(num);
     }
   };

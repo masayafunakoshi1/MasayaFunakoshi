@@ -91,6 +91,7 @@
     grid-column-start: 2;
     justify-self: start;
     align-content: center;
+    line-height: 4ch;
   }
 
   .Grid-Item-NavBar-3 {
@@ -101,6 +102,22 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .NavBar-Container {
+    display: grid;
+    grid-template-columns: 25px 2fr 2fr 25px;
+    grid-template-rows: 120px;
+  }
+
+  .NavBar-Items {
+    display: none;
+  }
+
+  /* NavBar Items */
+
+  .Title {
+    font-size: 35px;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (max-width: 480px) {

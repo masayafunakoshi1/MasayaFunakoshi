@@ -11,6 +11,10 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   const [scrollPos, setScrollPos] = useState(0);
 
+  useEffect(() => {
+    document.title = "Masaya Funakoshi";
+  }, []);
+
   return (
     <div className="App">
       <NavBar />

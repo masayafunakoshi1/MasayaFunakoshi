@@ -162,6 +162,67 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .AboutMe-Container {
+    display: grid;
+    grid-template-rows: 100px 1500px;
+    grid-template-columns: 25px auto 25px;
+  }
+  .AboutMe-Header {
+    grid-column-start: 2;
+    margin-top: 20px;
+  }
+  .AboutMe-Subgrid {
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-template-rows: 440px 460px 1fr;
+  }
+  .AboutMe-SubSubgrid {
+    display: grid;
+    grid-row-start: 1;
+    grid-template-columns: 1fr;
+  }
+
+  .AboutMe-PictureSubgrid {
+    display: grid;
+    grid-column-start: 1;
+    grid-template-columns: 20px auto 20px;
+    grid-template-rows: 0px minmax(auto, 426px) 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .PicOfMe {
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+    max-width: 530px;
+    max-height: 383px;
+    width: 100%;
+    height: auto;
+    min-width: 250px;
+  }
+  .AboutMe-TextSubgrid {
+    display: grid;
+    grid-row-start: 3;
+    grid-template-columns: 1fr 9fr 1fr;
+    grid-template-rows: minmax(auto, 500px);
+  }
+
+  .AboutMe-Text {
+    max-height: 600px;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-size: 1.6rem;
+  }
+
+  .TechStack {
+    max-height: auto;
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+  }
 }
 
 @media only screen and (max-width: 480px) {

@@ -135,6 +135,47 @@ a:active {
 
 /* Responsive CSS, Screen Widths */
 
+@media screen and (min-width: 1600px) {
+  .Projects-Page-Container {
+    display: grid;
+    grid-template-rows: 100px 1100px;
+    grid-template-columns: minmax(auto, 150px) auto minmax(auto, 150px);
+  }
+  .Projects-Page-Container-Subgrid {
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-template-rows: 1fr 1fr minmax(auto, 400px);
+    grid-template-columns: minmax(370px, auto) minmax(370px, auto) minmax(
+        370px,
+        auto
+      );
+  }
+  .Projects-Page-Container-SubSubgrid {
+    display: grid;
+    grid-template-rows: 20px minmax(200px, auto) 40px;
+    grid-template-columns: 10px minmax(370px, 510px) 10px;
+  }
+  .Projects-Page-Container-SubSubSubgrid {
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-template-rows: minmax(200px, auto) minmax(80px, auto);
+    grid-template-columns: minmax(370px, 510px);
+
+    background-color: rgb(22, 22, 22);
+  }
+
+  .Projects-Gifs {
+    max-height: auto;
+    max-width: 320;
+    height: 310px;
+    width: 100%;
+    min-height: 150px;
+    min-width: 350px;
+  }
+}
+
 @media only screen and (max-width: 1270px) {
   .Projects-Page-Container {
     display: grid;
@@ -174,6 +215,42 @@ a:active {
 }
 
 @media only screen and (max-width: 768px) {
+  .Projects-Page-Container {
+    display: grid;
+    grid-template-rows: 100px 2400px 400px;
+    grid-template-columns: minmax(auto, 100px) auto minmax(auto, 100px);
+  }
+  .Projects-Page-Container-Subgrid {
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-template-rows: 1fr 1fr minmax(auto, 400px);
+    grid-template-columns: minmax(auto, 500px);
+  }
+  .Projects-Page-Container-SubSubgrid {
+    display: grid;
+    grid-column-start: 2;
+    grid-template-rows: 20px minmax(auto, 400px) 40px;
+    grid-template-columns: 10px minmax(auto, 500px) 10px;
+  }
+  .Projects-Page-Container-SubSubSubgrid {
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-template-rows: minmax(auto, 300px) minmax(80px, auto);
+    grid-template-columns: minmax(150px, 500px);
+
+    background-color: rgb(22, 22, 22);
+  }
+
+  .Projects-Gifs {
+    max-height: 400px;
+    max-width: 600px;
+    height: 95%;
+    width: 100%;
+    min-height: auto;
+    min-width: 150px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -234,16 +311,5 @@ a:active {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .Projects-Gifs {
-    max-height: auto;
-    height: 310px;
-    min-height: 150px;
-    max-width: auto;
-    width: 510px;
-    min-width: 350px;
   }
 }

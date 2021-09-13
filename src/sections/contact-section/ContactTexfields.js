@@ -53,6 +53,9 @@ const ContactTexfields = () => {
       width: "35ch",
       marginBottom: "30px",
       colorSecondary: "white",
+      [theme.breakpoints.down("md")]: {
+        width: "70%",
+      },
       [theme.breakpoints.down("sm")]: {
         width: "70%",
       },
@@ -61,6 +64,9 @@ const ContactTexfields = () => {
       background: "#FAFAFA",
       width: "35ch",
       marginBottom: "10px",
+      [theme.breakpoints.down("md")]: {
+        width: "70%",
+      },
       [theme.breakpoints.down("sm")]: {
         width: "70%",
       },
