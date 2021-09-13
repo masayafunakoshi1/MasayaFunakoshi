@@ -100,10 +100,14 @@
 
 @media screen and (min-width: 1600px) {
   .Backdrop-Container {
+    background-color: black;
+    opacity: 80%;
+
     width: 27%;
     max-width: 510px;
     height: 310px;
   }
+
   .Backdrop-Subgrid {
     grid-template-rows: 70px 2fr;
   }
@@ -123,6 +127,9 @@
 
 @media only screen and (max-width: 1270px) {
   .Backdrop-Container {
+    background-color: black;
+    opacity: 80%;
+
     height: 249px;
     width: 40%;
 
@@ -166,6 +173,20 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .Backdrop-Container {
+    background-color: black;
+    opacity: 80%;
+
+    height: 290px;
+    width: 68%;
+
+    max-height: 400px;
+    max-width: 480px;
+
+    min-height: auto;
+    min-width: 150px;
+  }
+
   .Backdrop-Subgrid {
     grid-template-rows: 40px 1fr;
   }
@@ -183,17 +204,6 @@
     grid-row-end: 4;
     font-size: 12pt;
     margin-top: 0px;
-  }
-
-  .Backdrop-Container {
-    height: 290px;
-    width: 68%;
-
-    max-height: 400px;
-    max-width: 480px;
-
-    min-height: auto;
-    min-width: 150px;
   }
 
   .AppTitle {
@@ -225,6 +235,9 @@
 
 @media only screen and (max-width: 480px) {
   .Backdrop-Container {
+    background-color: black;
+    opacity: 80%;
+
     height: 300px;
     width: 85%;
 
