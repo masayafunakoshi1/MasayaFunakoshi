@@ -15,6 +15,10 @@ function App() {
     document.title = "Masaya Funakoshi";
   }, []);
 
+  window.onunload = function () {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="App">
       <NavBar />

@@ -71,9 +71,13 @@ const ContactTexfields = () => {
 
   //Styles
   const useStyles = makeStyles((theme) => ({
-    // root: {
-    //   marginTop: "10%",
-    // },
+    root: {
+      [theme.breakpoints.down("xs")]: {
+        maxWidth: "100%",
+        justifyContent: "center",
+        alignItems: "center",
+      },
+    },
     notchedOutline: {
       borderWidth: "1px",
       borderColor: "white",
@@ -89,6 +93,9 @@ const ContactTexfields = () => {
       [theme.breakpoints.down("sm")]: {
         width: "70%",
       },
+      [theme.breakpoints.down("xs")]: {
+        width: "80%",
+      },
     },
     bigTextfield: {
       background: "#FAFAFA",
@@ -100,10 +107,16 @@ const ContactTexfields = () => {
       [theme.breakpoints.down("sm")]: {
         width: "70%",
       },
+      [theme.breakpoints.down("xs")]: {
+        width: "80%",
+      },
     },
     submitBtn: {
       left: "24%",
       filter: "invert(100%) ",
+      [theme.breakpoints.down("xs")]: {
+        marginRight: "12%",
+      },
     },
     typography: {
       padding: theme.spacing(2),

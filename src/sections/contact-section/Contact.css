@@ -89,10 +89,10 @@ a:active {
 
 /* Responsive CSS, Screen Widths */
 
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 1300px) {
   .ContactPage-Container {
     display: grid;
-    grid-template-rows: 150px 700px;
+    grid-template-rows: 150px 1200px;
     grid-template-columns: 100px auto 100px;
   }
 
@@ -106,12 +106,12 @@ a:active {
     display: grid;
     grid-column-start: 2;
     grid-row-start: 2;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .ContactPage-ContactInfo {
     display: grid;
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-template-rows: repeat(3, 1fr);
   }
   .ContactPage-ContactInfo-Socials {
@@ -123,11 +123,11 @@ a:active {
 
   .ContactInfo-Location {
     grid-row-start: 1;
-    justify-self: start;
+    justify-self: center;
   }
   .ContactInfo-Email {
     grid-row-start: 2;
-    justify-self: start;
+    justify-self: center;
   }
 
   .Contact-Info-Text {
@@ -153,6 +153,10 @@ a:active {
   .Socials {
     max-width: 65px;
     margin-left: 20px;
+  }
+
+  .LinkedIn {
+    grid-column-start: 2;
   }
 }
 
@@ -205,6 +209,9 @@ a:active {
     margin-top: 20px;
     margin-left: 0px;
   }
+  .LinkedIn {
+    grid-column-start: 1;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -217,7 +224,10 @@ a:active {
   .ContactPage-Header {
     grid-column-start: 2;
     margin-top: 20px;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
+    font-size: 35pt;
   }
 
   .ContactPage-Subgrid {
@@ -238,7 +248,7 @@ a:active {
     text-decoration: none;
     color: #ffffff;
     margin-left: 10px;
-    font-size: 95%;
+    font-size: 70%;
   }
 
   .location {

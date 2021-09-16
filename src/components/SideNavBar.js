@@ -8,7 +8,6 @@ import "./styles/SideNavBar.css";
 const SideNavBar = ({ scrollPos }) => {
   const [navbarActive, setNavbarActive] = useState(false);
   const [widthMobile, setWidthMobile] = useState(false);
-  const [widthPx, setWidthPx] = useState(0);
   const [sideNavPull, setSideNavPull] = useState(false);
 
   useEffect(() => {
@@ -33,22 +32,14 @@ const SideNavBar = ({ scrollPos }) => {
     window.addEventListener("resize", debounceWidth);
   }, []);
 
-  // useEffect(() => {
-  //   if (window.innerWidth <= 490) {
-  //     setWidthMobile(true);
-  //   } else {
-  //     setWidthMobile(false);
-  //   }
-  // }, []);
-
   if (!widthMobile) {
     return (
       <AnimatePresence>
         {navbarActive ? (
           <motion.div
-            initial={{ x: -200 }}
+            initial={{ x: -150 }}
             animate={{ x: 0 }}
-            exit={{ x: -200 }}
+            exit={{ x: -150 }}
             transition={{ type: "spring", stiffness: 40 }}
             // className={`SideNavBar-Container ${navbarActive ? "active" : ""}`}
             className="SideNavBar-Container"
