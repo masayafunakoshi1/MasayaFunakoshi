@@ -103,7 +103,7 @@
 @media only screen and (max-width: 1300px) {
   .AboutMe-Container {
     display: grid;
-    grid-template-rows: 100px 2800px;
+    grid-template-rows: 100px 2000px;
     grid-template-columns: 100px auto 100px;
   }
   .AboutMe-Header {

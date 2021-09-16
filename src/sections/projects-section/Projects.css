@@ -32,7 +32,7 @@
   display: grid;
   grid-row-start: 2;
   grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .Projects-Header {
@@ -60,7 +60,7 @@
   margin: 10px 0px 0px 2px;
   background: rgb(65, 64, 64);
 
-  font-size: 14px;
+  font-size: 11px;
 
   align-items: center;
   justify-content: center;
@@ -306,7 +306,7 @@ a:active {
     margin: 0px 0px 0px 7px;
     background: rgb(65, 64, 64);
 
-    font-size: 13.5px;
+    font-size: 10px;
 
     align-items: center;
     justify-content: center;

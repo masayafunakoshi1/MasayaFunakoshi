@@ -22,6 +22,7 @@
 .Backdrop-Subgrid {
   display: grid;
   grid-template-rows: 40px 2fr;
+  max-width: inherit;
 }
 
 .AppTitle {
@@ -124,7 +125,7 @@
     grid-row-end: 4;
     font-size: 0.8vw;
     max-height: 206px;
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
 }
 
@@ -171,7 +172,7 @@
   }
 
   .Project-Description {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
   }
 }
 
@@ -192,6 +193,7 @@
 
   .Backdrop-Subgrid {
     grid-template-rows: 40px 1fr;
+    max-width: 90%;
   }
 
   .Backdrop-SubSubgrid {
@@ -206,11 +208,12 @@
     grid-row-start: 1;
     grid-row-end: 3;
     font-size: 2vw;
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   .AppTitle {
-    font-size: 20pt;
+    font-size: 18pt;
+    max-width: 320px;
   }
 
   .Src-Code {
@@ -233,6 +236,10 @@
 @media only screen and (max-width: 650px) {
   .Project-Description {
     max-width: 298px;
+  }
+  .Backdrop-Subgrid {
+    grid-template-rows: 40px 1fr;
+    max-width: 100%;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -261,7 +268,10 @@
   }
 
   .AppTitle {
-    font-size: 20pt;
+    font-size: 18pt;
+    line-height: 2ch;
+    max-width: 260px;
+    margin-top: 20px;
   }
   #Github:hover {
     max-width: 50px;
@@ -288,7 +298,7 @@
     grid-row-start: 1;
     grid-row-end: 3;
     font-size: 3.2vw;
-    margin-top: 0px;
+    margin-top: 20px;
   }
 
   .Src-Code {
