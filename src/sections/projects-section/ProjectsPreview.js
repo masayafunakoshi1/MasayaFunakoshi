@@ -45,6 +45,8 @@ const ProjectsPreview = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "tween", duration: 0.3 }}
                 onMouseEnter={() => setShowGif(1)}
+                onTouchStart={() => setShowGif(1)}
+                onTouchEnd={() => setShowGif(0)}
                 onMouseLeave={() => setShowGif(0)}
                 className="Projects-Gifs"
                 src={showGif === 1 ? gifSrc[0] : imgSrc[0]}
@@ -129,6 +131,8 @@ const ProjectsPreview = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "tween", duration: 0.3 }}
                 onMouseEnter={() => setShowGif(2)}
+                onTouchStart={() => setShowGif(2)}
+                onTouchEnd={() => setShowGif(0)}
                 onMouseLeave={() => setShowGif(0)}
                 className="Projects-Gifs"
                 src={showGif === 2 ? gifSrc[1] : imgSrc[1]}
@@ -211,6 +215,8 @@ const ProjectsPreview = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "tween", duration: 0.3 }}
                 onMouseEnter={() => setShowGif(3)}
+                onTouchStart={() => setShowGif(3)}
+                onTouchEnd={() => setShowGif(0)}
                 onMouseLeave={() => setShowGif(0)}
                 className="Projects-Gifs"
                 src={showGif === 3 ? gifSrc[2] : imgSrc[2]}
@@ -302,6 +308,8 @@ const ProjectsPreview = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "tween", duration: 0.3 }}
                 onMouseEnter={() => setShowGif(4)}
+                onTouchStart={() => setShowGif(4)}
+                onTouchEnd={() => setShowGif(0)}
                 onMouseLeave={() => setShowGif(0)}
                 className="Projects-Gifs"
                 src={showGif === 4 ? gifSrc[3] : imgSrc[3]}
