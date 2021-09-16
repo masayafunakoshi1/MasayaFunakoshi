@@ -1,6 +1,6 @@
 .AboutMe-Container {
   display: grid;
-  grid-template-rows: 100px 1470px;
+  grid-template-rows: 100px 1800px;
   grid-template-columns: 150px auto 150px;
 }
 .AboutMe-Header {
@@ -89,8 +89,8 @@
 .AboutMe-Text {
   grid-column-start: 2;
   text-align: left;
-  font-size: 1.3rem;
-  line-height: 4.5ch;
+  font-size: 1.1rem;
+  line-height: 4ch;
 }
 
 .AboutMe-Link-Text {
@@ -100,10 +100,10 @@
 
 /* Responsive CSS, Screen Widths */
 
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 1300px) {
   .AboutMe-Container {
     display: grid;
-    grid-template-rows: 100px 1800px;
+    grid-template-rows: 100px 2800px;
     grid-template-columns: 100px auto 100px;
   }
   .AboutMe-Header {
@@ -164,7 +164,7 @@
 @media only screen and (max-width: 768px) {
   .AboutMe-Container {
     display: grid;
-    grid-template-rows: 100px 1500px;
+    grid-template-rows: 100px 1700px;
     grid-template-columns: 25px auto 25px;
   }
   .AboutMe-Header {
@@ -211,9 +211,10 @@
 
   .AboutMe-Text {
     max-height: 600px;
+    height: 600px;
     overflow: scroll;
     overflow-x: hidden;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .TechStack {
@@ -228,7 +229,7 @@
 @media only screen and (max-width: 480px) {
   .AboutMe-Container {
     display: grid;
-    grid-template-rows: 100px 1500px;
+    grid-template-rows: 100px 1700px;
     grid-template-columns: 25px auto 25px;
   }
   .AboutMe-Header {
@@ -281,7 +282,7 @@
   }
 
   .AboutMe-Text {
-    max-height: 400px;
+    max-height: 600px;
     overflow: scroll;
     overflow-x: hidden;
   }
@@ -310,7 +311,7 @@
 @media only screen and (max-width: 370px) {
   .AboutMe-Container {
     display: grid;
-    grid-template-rows: 100px 1400px;
+    grid-template-rows: 100px 1600px;
     grid-template-columns: 25px auto 25px;
   }
 

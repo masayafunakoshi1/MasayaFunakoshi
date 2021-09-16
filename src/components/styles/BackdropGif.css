@@ -21,7 +21,7 @@
 
 .Backdrop-Subgrid {
   display: grid;
-  grid-template-rows: 50px 2fr;
+  grid-template-rows: 40px 2fr;
 }
 
 .AppTitle {
@@ -29,7 +29,7 @@
   display: flex;
   justify-self: center;
   align-items: center;
-  font-size: 23pt;
+  font-size: 18pt;
   color: #ffe600;
 }
 
@@ -40,7 +40,7 @@
   grid-row-end: 3;
 
   text-align: left;
-  font-size: 1.1vw;
+  font-size: 0.7vw;
   line-height: 3.5ch;
   margin-left: 20px;
   margin-top: 20px;
@@ -122,16 +122,19 @@
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 4;
+    font-size: 0.8vw;
+    max-height: 206px;
+    overflow-y: scroll;
   }
 }
 
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 1300px) {
   .Backdrop-Container {
     background-color: black;
     opacity: 0.8;
 
     height: 249px;
-    width: 40%;
+    width: 40.5%;
 
     max-height: 249px;
     max-width: 500px;
@@ -168,7 +171,7 @@
   }
 
   .Project-Description {
-    font-size: 1.8vw;
+    font-size: 1.3vw;
   }
 }
 
@@ -201,19 +204,13 @@
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 4;
-    font-size: 12pt;
+    grid-row-end: 3;
+    font-size: 2vw;
     margin-top: 0px;
   }
 
   .AppTitle {
     font-size: 20pt;
-  }
-
-  .Project-Description {
-    font-size: 13pt;
-    margin-top: 0px;
-    max-width: 270px;
   }
 
   .Src-Code {
@@ -233,6 +230,11 @@
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .Project-Description {
+    max-width: 298px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .Backdrop-Container {
     background-color: black;
@@ -285,7 +287,7 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
-    font-size: 12pt;
+    font-size: 3.2vw;
     margin-top: 0px;
   }
 

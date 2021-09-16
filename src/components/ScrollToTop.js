@@ -20,6 +20,13 @@ const useStyles = makeStyles((theme) => ({
       left: "92%",
     },
     [theme.breakpoints.down("sm")]: {
+      left: "85%",
+      top: "88%",
+      zIndex: "100",
+      width: "60px",
+      height: "60px",
+    },
+    [theme.breakpoints.down("xs")]: {
       left: "80%",
       top: "88%",
       zIndex: "100",
