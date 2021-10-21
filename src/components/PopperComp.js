@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core";
-import { Popper, Fade } from "@material-ui/core";
+import React, { useState } from "react";
+import { makeStyles, Popper, Fade } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -26,11 +25,6 @@ const PopperComp = (props) => {
     setAnchorElId(anchorEl ? null : event.currentTarget.children[0].id);
   };
 
-  // useEffect(() => {
-  //   console.log(anchorEl);
-  //   console.log(anchorElId);
-  // }, [anchorEl, anchorElId]);
-
   let popoverText;
 
   switch (anchorElId) {
@@ -44,7 +38,7 @@ const PopperComp = (props) => {
       popoverText = "Click me!";
       break;
     case "HomePage-Popover-ImgOfMe":
-      popoverText = "Drag me with you!";
+      popoverText = "👆 Click and hold to drag me with you!";
       break;
     case "ProjectGif-Popover":
       popoverText = "Hover to watch Gif. Click for more info";

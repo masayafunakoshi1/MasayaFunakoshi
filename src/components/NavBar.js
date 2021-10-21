@@ -3,22 +3,25 @@ import { Link } from "react-scroll";
 import "./styles/NavBar.css";
 
 const NavBar = () => {
-  const [showCodeTitle, setShowCodeTitle] = useState(false);
+  // const [showCodeTitle, setShowCodeTitle] = useState(false);
 
   return (
-    <nav className="NavBar-Container">
-      <div className="Grid-Item-NavBar-1">
-        <span>
-          <Link
-            className="Title"
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            duration={1500}
-            onMouseEnter={() => setShowCodeTitle(true)}
-            onMouseLeave={() => setShowCodeTitle(false)}
-          >
+    <nav className="NavBar-Container ">
+      <Link
+        className="Title Grid-Item-NavBar-1"
+        activeClass="active"
+        to="home"
+        spy={true}
+        smooth={true}
+        duration={1500}
+        // onMouseEnter={() => setShowCodeTitle(true)}
+        // onMouseLeave={() => setShowCodeTitle(false)}
+      >
+        <div className="">
+          <span>
+            <span>masaya funakoshi</span>
+            {/* 
+            Figure out how to make the code words do cool animation
             {!showCodeTitle ? (
               <span>masaya funakoshi</span>
             ) : (
@@ -27,10 +30,10 @@ const NavBar = () => {
                 mf <>&#47;</>
                 <>&#62;</>
               </span>
-            )}
-          </Link>
-        </span>
-      </div>
+            )} */}
+          </span>
+        </div>
+      </Link>
       <ul className="NavBar-Items-All Grid-Item-NavBar-3">
         <li className="NavBar-Items">
           <Link
