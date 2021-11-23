@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 body {
   margin: 0;
-  font-family: "Sora", sans-serif;
+  /* font-family: "Sora", sans-serif; */
+  font-family: "Roboto", sans-serif;
   font-size: 25px;
   font-style: normal;
   line-height: 61px;

@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { debounce } from "lodash";
 import { makeStyles } from "@material-ui/core/styles";
+import PopperComp from "./PopperComp";
 import Fab from "@material-ui/core/Fab";
 
 const useStyles = makeStyles((theme) => ({
@@ -37,14 +38,14 @@ const useStyles = makeStyles((theme) => ({
   keyUpIcon: {
     display: "flex",
     color: "white",
-    fontSize: "50pt",
+    fontSize: "70pt",
     textAlign: "center",
     alignItems: "center",
-    marginTop: "20px",
+    marginTop: "30px",
     maxHeight: "40px",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "40pt",
-      marginTop: "13px",
+      fontSize: "60pt",
+      marginTop: "23px",
     },
   },
   hidden: {
@@ -75,13 +76,15 @@ const ScrollToTop = ({ scrollPos, setScrollPos }) => {
     scroll.scrollToTop({ duration: 1000, smooth: "true" });
   };
   return (
-    <Fab
-      onClick={scrollToTopHandler}
-      className={scrollPos >= 500 ? classes.scrollToTopBtn : classes.hidden}
-      id="BackToTop-Popover"
-    >
-      <div className={classes.keyUpIcon}>^</div>
-    </Fab>
+    <PopperComp>
+      <Fab
+        onClick={scrollToTopHandler}
+        className={scrollPos >= 500 ? classes.scrollToTopBtn : classes.hidden}
+        id="BackToTop-Popover"
+      >
+        <div className={classes.keyUpIcon}>^</div>
+      </Fab>
+    </PopperComp>
   );
 };
 

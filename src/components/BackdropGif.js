@@ -6,6 +6,7 @@ const projectNames = [
   "Photography Website V2",
   "MasaFuna Photos",
   "Yummy Recipes",
+  "Photography Website V3",
 ];
 
 const projectSrc = [
@@ -27,6 +28,7 @@ const projectDescriptions = [
   "My personal photography website showcasing my photos for clients. Full-Stack application using React, Firebase, and MUI for styling",
   "Instagram clone photo gallery, with a responsive UI and animations. Uses React, Typescript, Firebase, Semantic UI and framer-motion for styling/animations",
   "Simple Recipe App using Edamam API. React, Edamam, and MUI for styling.",
+  "My personal photography-website-v3 which will feature a more modern UI, stronger design patterns, and more efficient code. Using React, Firebase, and MUI for styling",
 ];
 
 const BackdropGif = ({ backdropCondHandler, backdropNum }) => {

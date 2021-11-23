@@ -46,6 +46,9 @@ const PopperComp = (props) => {
     case "ProjectGif-Popover-UnderDevelopment":
       popoverText = "🛠 Currently under development ⚒";
       break;
+    // case "BackToTop-Popover":
+    //   popoverText = "Scroll back to top";
+    //   break;
     // case "Home-Icon":
     //   popoverText = "Home";
     //   break;

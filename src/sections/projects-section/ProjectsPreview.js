@@ -392,6 +392,7 @@ const ProjectsPreview = () => {
                 className="Projects-Gifs"
                 src=""
                 alt=""
+                onClick={() => backdropCondHandler(4)}
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src = "images/Construction1.jpg";
@@ -399,6 +400,14 @@ const ProjectsPreview = () => {
                 }}
               />
             </PopperComp>
+            {backdropShow === 4 ? (
+              <BackdropGif
+                backdropNum={backdropNum}
+                backdropCondHandler={backdropCondHandler}
+              />
+            ) : (
+              ""
+            )}
             <div className="Projects-Page-Container-Subx4grid"></div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 .AboutMe-Container {
   display: grid;
-  grid-template-rows: 100px 1800px;
+  grid-template-rows: 100px 1400px;
   grid-template-columns: 150px auto 150px;
 }
 .AboutMe-Header {
@@ -89,13 +89,19 @@
 .AboutMe-Text {
   grid-column-start: 2;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 4ch;
 }
 
 .AboutMe-Link-Text {
-  text-decoration: underline;
-  color: white;
+  font-style: italic;
+  color: rgb(252, 255, 45);
+  font-weight: 700;
+}
+.AboutMe-Link-Text:hover {
+  font-style: italic;
+  color: rgb(0, 47, 255);
+  font-weight: 700;
 }
 
 /* Responsive CSS, Screen Widths */
