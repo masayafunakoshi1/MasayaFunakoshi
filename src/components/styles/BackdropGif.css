@@ -56,10 +56,10 @@
 }
 
 #Github:hover {
-  transition: 0.01s ease;
+  transition: 0.1s ease;
   max-width: 60px;
-  filter: invert(90%) sepia(9%) saturate(7024%) hue-rotate(359deg)
-    brightness(105%) contrast(105%);
+  /* filter: invert(90%) sepia(9%) saturate(7024%) hue-rotate(359deg)
+    brightness(105%) contrast(105%); */
 }
 
 #Github {
@@ -115,7 +115,7 @@
 
   .Backdrop-SubSubgrid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 85px);
   }
 
   .Project-Description {
@@ -124,7 +124,7 @@
     grid-row-start: 1;
     grid-row-end: 4;
     font-size: 0.8vw;
-    max-height: 206px;
+    max-height: 250px;
     overflow-y: hidden;
   }
 }
