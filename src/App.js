@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import ScrollToTop from "./components/ScrollToTop";
 import SideNavBar from "./components/SideNavBar";
 import HomePage from "./pages/HomePage";
-import Projects from "./sections/projects-section/Projects";
 import AboutMe from "./sections/about-section/AboutMe";
 import Contact from "./sections/contact-section/Contact";
-import ScrollToTop from "./components/ScrollToTop";
+import Projects from "./sections/projects-section/Projects";
 
 function App() {
   const [scrollPos, setScrollPos] = useState(0);

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import "./Projects.css";
 import { motion } from "framer-motion";
+import React, { useState } from "react";
 import BackdropGif from "../../components/BackdropGif";
-import PopperComp from "../../components/PopperComp";
 import FadeInSections from "../../components/FadeInSections";
+import PopperComp from "../../components/PopperComp";
+import "./Projects.css";
 
 const ProjectsPreview = () => {
   const [showGif, setShowGif] = useState(0);

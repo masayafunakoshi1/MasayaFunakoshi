@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Typing from "react-typing-animation";
 import { motion } from "framer-motion";
-import "./styles/HomePage.css";
+import React, { useEffect, useState } from "react";
+import Typing from "react-typing-animation";
 import PopperComp from "../components/PopperComp";
+import "./styles/HomePage.css";
 
 let audio = new Audio("/NamePronounciation.mp3");
 

@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-scroll";
-import { debounce } from "lodash";
 import { ClickAwayListener } from "@material-ui/core";
+import { AnimatePresence, motion } from "framer-motion";
+import { debounce } from "lodash";
+import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-scroll";
 import "./styles/SideNavBar.css";
 
 const SideNavBar = ({ scrollPos }) => {

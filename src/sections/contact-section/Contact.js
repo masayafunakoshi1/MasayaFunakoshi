@@ -1,8 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import FadeInSections from "../../components/FadeInSections";
-import ContactTexfields from "./ContactTexfields";
 import "./Contact.css";
+import ContactTexfields from "./ContactTexfields";
 
 const Contact = () => {
   return (
