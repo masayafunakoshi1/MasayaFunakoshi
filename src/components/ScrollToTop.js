@@ -1,9 +1,9 @@
+import Fab from "@material-ui/core/Fab";
+import { makeStyles } from "@material-ui/core/styles";
+import { debounce } from "lodash";
 import React, { useEffect, useMemo } from "react";
 import { animateScroll as scroll } from "react-scroll";
-import { debounce } from "lodash";
-import { makeStyles } from "@material-ui/core/styles";
 import PopperComp from "./PopperComp";
-import Fab from "@material-ui/core/Fab";
 
 const useStyles = makeStyles((theme) => ({
   scrollToTopBtn: {

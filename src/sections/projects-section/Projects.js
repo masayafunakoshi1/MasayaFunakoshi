@@ -1,7 +1,7 @@
 import React from "react";
-import ProjectsPreview from "./ProjectsPreview";
 import FadeInSections from "../../components/FadeInSections";
 import "./Projects.css";
+import ProjectsPreview from "./ProjectsPreview";
 
 const Projects = () => {
   return (
