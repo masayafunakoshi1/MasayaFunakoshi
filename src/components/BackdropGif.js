@@ -12,14 +12,14 @@ const projectNames = [
 const projectSrc = [
   "https://github.com/masayafunakoshi1/Tired-Nomads",
   "https://github.com/masayafunakoshi1/photography-website-v2",
-  "https://github.com/masayafunakoshi1/ReactFirebasePhotoGallery",
+  "https://github.com/masayafunakoshi1/Photo-Gallery-MasayaFunakoshi",
   "https://github.com/masayafunakoshi1/RecipeApp",
 ];
 
 const projectDemos = [
   "https://www.tirednomads.com/",
-  "https://dreamy-cori-899bee.netlify.app/",
-  "https://naughty-chandrasekhar-9652f9.netlify.app/",
+  "https://masayafunakoshiphotography.netlify.app/",
+  "https://masaya-funakoshi-photo-gallery.netlify.app/",
   "https://optimistic-minsky-28af7e.netlify.app/",
 ];
 
